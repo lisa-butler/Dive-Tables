@@ -19,20 +19,43 @@ Sheet1 = SHEET.worksheet('Sheet1')
 data = Sheet1.get_all_values()
 
 #print(data[0][1])
-inputtedDepth = 50
-inputtedMins = 126
+inputtedDepth = 0
+inputtedMins = 0
 three_stop = ""
 six_stop = ""
 
-if inputtedMins > 125:
+def get_diver_inputs():
+    """
+    Requests diver to input their depth and time
+    """
+    print('Welcome to the Buehlmann Table for Air Diving Decompression')
+    print('Use this table to calculate your Repetitive Dive time and Residual Nitrogen Times\n')
+    start = input('Would you like to start a calculation y/n')
+    if start.lower() == 'y':
+        inputtedDepth = input('Depth:')
+        inputtedMins = input('Time:')
+
+        print(f"Depth of {inputtedDepth} meters")
+        print(f"Time of {inputtedMins} minutes")
+
+        return [inputtedDepth, inputtedMins]
+
+
+res = get_diver_inputs()
+inputtedDepth = res[0]
+inputtedMins = res[1]
+
+print(f"Mins & Depth = {inputtedDepth}, {inputtedMins}")
+
+if int(inputtedMins) > 125 or int(inputtedDepth) > 51:
     print("Not compatable")
 else:
     for row in data:
         if row[0] != "meters":
             # print(int(row[0]))
-            if inputtedDepth <= int(row[0]):
+            if int(inputtedDepth) <= int(row[0]):
                 # print(row[1])
-                if inputtedMins <= int(row[1]):
+                if int(inputtedMins) <= int(row[1]):
                     # print(row[2])
                     if int(row[2]) == 0:
                         # return "No Deco Needed"
@@ -51,11 +74,7 @@ else:
                         print(f'3m stop for {three_stop}mins and 6m stop for {six_stop}mins required')
 
 
-# with open('creds.json', 'r') as f:
-#     table_dict = json.load(f)
 
-# for table in table_dict:
-#     print(table['meters'])
 
 # def get_diver_inputs():
 #     """
