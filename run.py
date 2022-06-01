@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import json
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -12,11 +13,28 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('Deco_Table')
 
-Sheet1 = SHEET.worksheet('Sheet1')
+def get_diver_inputs():
+    """
+    Requests diver to input their depth and time
+    """
+    print('Welcome to the Buehlmann Table for Air Diving Decompression')
+    print('Use this table to calculate your Repetitive Dive time and Residual Nitrogen Times\n')
+    start = input('Would you like to start a calculation y/n')
+    if start.lower() == 'y':
+        depth = input('Depth:')
+        time = input('Time:')
 
-data = Sheet1.get_all_values()
+        print(f"Depth of {depth} meters")
+        print(f"Time of {time} minutes")
 
-print(data)
+    elif start.lower() == 'n':
+        print('Exiting Calculator')
+    else:
+        print('That is not a valid input. Please try again')          
+
+
+get_diver_inputs()        
+
 
 
 # print('Welcome to the Buehlmann Table for Air Diving Decompression')
@@ -31,8 +49,7 @@ print(data)
 #     depth = input('Depth:')
 #     time = input('Time:')
 
-# elif continue_calculation.lower() == 'n':
-#     print('Exiting Calculator')
+
    
 # else:
 #     print('That is not a valid input. Please try again')  
