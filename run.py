@@ -24,6 +24,11 @@ inputtedMins = 0
 three_stop = ""
 six_stop = ""
 
+def return_home():
+    """
+    Function to return user to the initial opening options of the program
+    """
+
 def get_diver_inputs():
     """
     Requests diver to input their depth and time
@@ -45,10 +50,10 @@ res = get_diver_inputs()
 inputtedDepth = res[0]
 inputtedMins = res[1]
 
-print(f"Mins & Depth = {inputtedDepth}, {inputtedMins}")
+print(f"Your dive was {inputtedDepth} meters for {inputtedMins} minutes ")
 
 if int(inputtedMins) > 125 or int(inputtedDepth) > 51:
-    print("Not compatable")
+    print("Buehlmann tables do not support depths exceeding 51m and dives exceeding 125 minutes, please try again")
 else:
     for row in data:
         if row[0] != "meters":
@@ -59,7 +64,7 @@ else:
                     # print(row[2])
                     if int(row[2]) == 0:
                         # return "No Deco Needed"
-                        print("No Deco Needed")
+                        print("No decompression stop needed")
                         break
                     else:
                         three_stop = row[2]
@@ -75,43 +80,31 @@ else:
 
 
 
+def info_on_tables
+"""
+Gives the user information on the functionality of the tables
+"""
+print("The Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983")
+print("They display a mathematical algorithm which outlines the way in which inert gases (specificlly nitrogen), enter and leave the body at different ambient pressures"/n)
+print("Dive computers run off many algorithms, the Bühlmann algorithm is one of these")
+(pause)
+print("Recreational divers are not permitted to hit 'decos' or decompression stops, during their dives"/n)
+print("Decompression stops are stops that a diver must do when surfacing, they can be at 3m, 6m, 9m or deeper, depending on the depth of dive"/n)
+print("These stops allow the divers body tissues time of 'off-gas' or time for the nitrogen to leave the bodys cells"/n)
+(pause)
+print("Not allowing the body to adequately off-gas can result in an illness nown as decompression sickness or 'the bends"/n)
+print("This is a condition that ranges from mild to life threatening and involves nitrogen bubbles becoming too large in the divers blood and blocking blood and, hence O2, from reaching divers tissues"/n)
+(pause)
+print("Using the Bühlmann tables or diving with a dive computer, we can aim to mitigate these risks and enjoy the wonders of diving!"/n)
+(pause)
+print("Information complete")
 
-# def get_diver_inputs():
-#     """
-#     Requests diver to input their depth and time
-#     """
-#     print('Welcome to the Buehlmann Table for Air Diving Decompression')
-#     print('Use this table to calculate your Repetitive Dive time and Residual Nitrogen Times\n')
-#     start = input('Would you like to start a calculation y/n')
-#     if start.lower() == 'y':
-#         depth = input('Depth:')
-#         time = input('Time:')
-
-#         print(f"Depth of {depth} meters")
-#         print(f"Time of {time} minutes")
-
-#     elif start.lower() == 'n':
-#         print('Exiting Calculator')
-#     else:
-#         print('That is not a valid input. Please try again')          
-
-
-# get_diver_inputs()        
-
-
-
-
-
+exit_story = input('Would you like to return home? Type "home" to return to home')
+if exit.story.lower() == 'home':
+    return_home()
+else if exit.story.lower() != 'home':
+    print("Im sorry that was an invalid input")
+    input('Would you like to return home? Type "home" to return to home')
 
 
 
-# """
-# Calculates if you need a decompression stop
-# """
-
-# print('Your depth was {depth}')
-# print('Your time was {time}')
-
-
-# if input('Depth:') = 15 and input('Time:') >= 90:
-#     print (deco)
