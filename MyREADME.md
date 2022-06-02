@@ -56,6 +56,17 @@ I want to be able to plan a dive based on a dive time.
 I want to plan a dive based on a depth.
 I want to know what algorithmm this calculator is using.
 I want a quick and easy way to navigate through this program.
-I want to know 
 
+As a student:
+I want to be able to learn some theory about dive tables.
+I want to be able to input depths and times to see if they would require a deco.
+I want to be able to find out the max depth i can go to for a given time without incurring a deco.
+I want to find out the max time i can dive for at a given depth without incurring a deco.
 
+**Scope:**
+The program shoud have a simple interface and be intuitive to work through.
+The program should be accessible on all devices.
+The program should perform a function correctly.
+The diver should be able to use the program as a tool to effectively plan a dive.
+The information the program provided should be accurate and correct.
+Ideally the program should utilise Google Sheets and an API for development purposes..
