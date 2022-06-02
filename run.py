@@ -24,17 +24,35 @@ inputtedMins = 0
 three_stop = ""
 six_stop = ""
 
-def return_home():
+def main_menu():
     """
-    Function to return user to the initial opening options of the program
+    Runs main welcome message and optional branches
     """
+    print('Welcome to the Buehlmann Table for Air Diving Decompression'/n)
+    print('This calculator will provide you with the means to calculate your decompression times or plan a dive'/n)
+    print('You can also access information about the Buehlmann Table and why it was created'/n)
+    (pause)
+    print('Would you like to read some information about dive tables? Make a dive plan? Or calculate your deco stops?'/n)
+    options_main = input('For information type "info", for dive planning type "plan" and for deco stop calculation type "deco"' )
+    if options_main.lower() == "info":
+        print("You have selected to view the information page")
+        info_on_tables()
+    elif options_main.lower() == "plan"
+        print("You have selected to visit the dive planning page")
+        dive_plannig_main()
+    elif options_main.lower() == "deco"
+        print("You have selected to visit the deco stop calculation page")
+        deco_calculator()    
+
+
+
 
 def get_diver_inputs():
     """
     Requests diver to input their depth and time
     """
-    print('Welcome to the Buehlmann Table for Air Diving Decompression')
-    print('Use this table to calculate your Repetitive Dive time and Residual Nitrogen Times\n')
+    
+    print('You have selected to calculate if a decompression stop is needed for a given depth and time\n')
     start = input('Would you like to start a calculation y/n')
     if start.lower() == 'y':
         inputtedDepth = input('Depth:')
@@ -99,12 +117,9 @@ print("Using the Bühlmann tables or diving with a dive computer, we can aim to 
 (pause)
 print("Information complete")
 
-exit_story = input('Would you like to return home? Type "home" to return to home')
-if exit.story.lower() == 'home':
-    return_home()
-else if exit.story.lower() != 'home':
-    print("Im sorry that was an invalid input")
-    input('Would you like to return home? Type "home" to return to home')
+exit_story = input('Press any key to return home')
+return_home()
+
 
 
 
