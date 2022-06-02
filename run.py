@@ -130,9 +130,37 @@ def dive_planning_main():
         print('You have selected to work out how long you can stay at a given depth\n')
         user_depth = input('Please type depth')
         print(f'You have input a depth of {user_depth} meters')
-        time_calculation():
+        time_calculation()
+
     elif plan.lower() == 'depth':
         print('You have selected to work out how deep you can go for a given time\n')
         user_time = input('Please type time')
         print(f'You have input a time of {user_time} minutes')
-        depth_calculation():
+        depth_calculation()
+
+
+def time_calculation():
+    """
+    Calculates time for a given depth
+    """        
+    if int(user_depth) > 51:
+        print("Buehlmann tables do not support depths exceeding 51m, please try again")
+    else:
+        for row in data:
+            # column 0 find depth, for this depth find highest time with no deco
+            if (user_depth) <= int(row[0]):
+                if int(row[2]) == 0:
+                    # if int(row[1]) higest value in that section
+
+
+def depth_calculation():
+    """
+    Calculates depth for a given time
+    """
+    if int(user_time) > 125:
+        print("Buehlmann tables do not support dives exceeding 125 minutes, please try again")
+    else:
+        for row in data:
+            if (user_time) <= int(row[1]):
+                if int(row[2]) == 0:
+                    # if find maximum dpeth for this time 
