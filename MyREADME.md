@@ -146,3 +146,43 @@ If the depth or time fall out of the range supported by the bulhemann tables the
 If the depth and time are within the range, the program will check row 2, the row that contains the 3 minute stop time. If this is zero then all other stops are 0. However if this is not 0, then it will check row 3 for 0, if this is zero it gives the number in row 2 as a 3m deco time. If row 3 contains a number > than 0, it will then check row 4, the 9m stop time row. If this contains 0, it will give the time for 3m and 6m. If this contains a number > 0, it will give the stop time for 3m, 6m and 9m.
 This information will be printed to the terminal. The user will then be asked if they wish to make another calculation or return to the main landing menu.
 
+**Further features I would implement:**
+
+If I was to build this program with more time and scope I would implement some different features.
+
+* I would have more options for information, such as a history option that would explore the history of dive tables and decompression theory (which is quite fascinating!).
+* I would have a user information storage option so that the user could come back and view their previous calculations.
+* I would have a front end to improve user experience.
+* I would have an option to make your calculations using different algorithms, rather than solely bulhmann.
+
+------------------------------------------------------------------
+
+## Technologies Used 
+
+<a name="tech"></a>
+
+
+### **Languages** 
+
+The languages used in this project were;
+
+* Python
+
+### **Frameworks/Libraries/programs:**
+
+* GitHub: Used to store the project and to deploy the finished project.
+* Fork: This was used as a local place to push code to and to pull from the Git repository.
+* Brackets text editor: This was used to write the code locally.
+* Lucid Chart was used to plan the flow of my code.
+* Heroku was used to deploy my project.
+
+
+------------------------------------------------------------------
+
+## Troubleshooting and testing
+
+<a name="test"></a>
+
+### **Troubleshooting:**
+Troubleshooting in this project was predominantly focused around issues related to being new to the language. Simple synthax errors as well as function placement and errors in logic made up the bulk of issues that were encountered.
+
