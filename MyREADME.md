@@ -69,4 +69,32 @@ The program should be accessible on all devices.
 The program should perform a function correctly.
 The diver should be able to use the program as a tool to effectively plan a dive.
 The information the program provided should be accurate and correct.
-Ideally the program should utilise Google Sheets and an API for development purposes..
+Ideally the program should utilise Google Sheets and an API for development purposes.
+
+### **Structural planning**
+
+UI was very basic for this project as it was a simple command line interface. However, the navigation had to be designed in a user friendly manner. Establishing how to create a good user experience and intuitive process on the application took some thought.
+
+**Main menu:**
+A main menu or landing menu was opted for as it provided the opportunity to have an introduction to the page and alert the user to the options avalible within the program. This served as the 'home page' and etablished what the program was for and how to select various options.
+
+
+**Info option:**
+The information option provided the user with a more in depth way to explore the logic behind dive tables and was a way for the developer to explain how the dive table algorithm works and why it is used in the first place. A simple line by line readout was used to provide the user with the information in a steady fashion. The option to return home was presented at the end.
+
+![Initial logic test](images/initialqtest.jpg)
+
+
+**Dive planning option:**
+The dive planning option was created secondary to the deco calculationn option. It was made into its own element as it is very often the case that divers will be planning their dive and opt to dive a certain feature that they know is in a set depth, they will need to calculate how long they will have on this feature (eg. a wreck) before they will hit a deco. Thus, having a time calculation based on a desired depth was a beneficial option. 
+When diving for a set time frame, divers may like to check that they wont run into a deco due to being underwater at a shallower depth for a prolongued period. ie. if the divers were opting to dive from shore to a feature and return underwater. They may know this would take 30 minutes to complete. This may be fine at low water, however, at high water, or on a spring tide, there may be an additional 3 meters of water above them. And this traverse may land them in a deco, forcing an earlier surfacing and potentially leaving divers exposed in a shipping lane or other dangerous situation.
+
+**Deco calculator option:**
+The deco calculator option was put in as a way for divers to both learn about deco stops and as a way for divers to calculate their decos before or after a dive. The primary function of the deco calculator was to demonstrate the functionality of a dive computer. However, it can be used in this context; If i was planning a dive to 30m and knew that i would be down there for 35 minutes, i would need to check what decos i would be hitting. By inputting these numbers into the calculator, i would see that i would need to do a 4 munute stop at 6m and an 11 minute stop at 3m. These times would then be factored into my plan to enable me to ensure that i had enough breathing gas to achieve this. As most recreational divers should not be hitting deco stops, the calclator should primarily be used to double check computer readings.
+
+
+**Wireframes:**
+For this project i started with wire frames drawn on paper, these were then mocked up on a wrod docuemnt to form a basic idea of the proposed layout of the quiz pages.
+The basic plan for the quiz was to keep it as simple and uncluttered as possible while creating an asthetically pleasing and enjoyable user experience. 
+
+![Wire frame of quiz page](images/wireframequizq.jpg)
