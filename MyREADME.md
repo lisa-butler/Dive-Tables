@@ -186,3 +186,98 @@ The languages used in this project were;
 ### **Troubleshooting:**
 Troubleshooting in this project was predominantly focused around issues related to being new to the language. Simple synthax errors as well as function placement and errors in logic made up the bulk of issues that were encountered.
 
+
+**Testing the program:**
+    
+* All input sections worked effectively. Yes.
+* All requested inputs were assigned an output. Yes.
+* Outputs were correct for the input. Yes.
+* The text was legible and there were no typos . Yes.
+* There was smooth transition between sections. Yes.
+* The program was user friendly and intuitive. Yes.
+* The outpts given where the program needed to reference the google sheet were correct. Yes.
+
+
+<!-- **Testing using Google Lighthouse:**
+
+Testing with Lighthouse was straightforward and did not raise any significant issues.
+
+![Lighthouse test](images/lighthousetest.jpg)
+
+**Testing using W3C Validator:**
+
+Testing with W3C Validator came back with no errors or warnings. 
+
+![W3C Validator test](images/w3ctest.jpg)
+
+**Testing using Jigsaw:**
+
+Testing with CSS Jigsaw validator showed no errors.
+
+![Jigsaw test](images/jigsawtest.jpg)
+
+**Testing using W3C jsHint:**
+
+Testing with jsHint showed 47 warnings. These were all pertaining to the version of javascript that was being used, suggesting that version 6 needs to be run for these functions to work effectively. As i used version 6 to write the code and some research showed that this will vary device to device, i did not pursue this issue.
+
+![jsHint test](images/jshinttest.jpg) -->
+
+## Bugs
+
+<a name="bugs"></a>
+
+### **Bugs Found:**
+
+Some interesting bugs were;
+
+ An infinite loop within a while statement that continued to print a statement eternally until the terminal was shut down. This was fixed by calling the function again after printing the error message once and then breaking the loop.
+
+ <!-- screenshot of infinite loop -->
+
+ Functions not being called due to being below the current function. As pyhton reads through code top to bottom, it did not know these functions existed. 
+ <!-- This was fixed by -->
+
+
+
+------------------------------------------------------------------
+
+## Deployment
+
+<a name="deploy"></a>
+HEROKU!!!!
+Deployment of the quiz via github was done using the following steps;
+* After logging into GitHub I located my repository for the Dive Quiz. 
+* I then clicked the "Settings" button at the top of my repository
+* I found and clicked on the Pages tab on the left of the screen.
+* On this page under "Source" option I clicked the dropdown called "None" and select "Master Branch".
+* The page automatically refreshed.
+* I was told that my quiz was deploying, and a link was displayed. After about a minute and a refresh there was a tick present next to the link and my quiz was deployed and live.
+
+
+------------------------------------------------------------------
+
+## Credits and Acknowledgements
+
+<a name="credits"></a>
+
+### **Credits:**
+
+* Code: Code advice was taken from Stack Overflow (https://www.w3schools.com/) and the Code Institutes workthrough projct and course content.
+* Information: Some information was taken from dive-tach (http://www.dive-tech.co.uk/workman%20and%20buhlmann.htm) and from Dip N Dive (https://dipndive.com/blogs/dive-gear/dive-computer-algorithms-for-dummies).
+
+
+
+
+### **Acknowledgements:** 
+
+* My program coordinator Kasia for contiuned support and advice throughout.
+* My software developer friends (Joshua Butler-senior dev at Overstock Ireland and Glenn Gilmartin- senior dev at Overstock Ireland) for their advice and patience.
+* My mentor Seun Owonikoko for advising on the development stages of my project.
+
+------------------------------------------------------------------
+
+## Content and resources
+
+<a name="content"></a>
+
+* All content was written by the developer as part of an academic exercise for the Code Institute.
