@@ -244,14 +244,20 @@ Some interesting bugs were;
 ## Deployment
 
 <a name="deploy"></a>
-HEROKU!!!!
-Deployment of the quiz via github was done using the following steps;
-* After logging into GitHub I located my repository for the Dive Quiz. 
-* I then clicked the "Settings" button at the top of my repository
-* I found and clicked on the Pages tab on the left of the screen.
-* On this page under "Source" option I clicked the dropdown called "None" and select "Master Branch".
-* The page automatically refreshed.
-* I was told that my quiz was deploying, and a link was displayed. After about a minute and a refresh there was a tick present next to the link and my quiz was deployed and live.
+
+Deployment of the program was done via github and Heroku;
+* Initially, i opened Heroku and created an account. 
+* I then created an app in Heroku and named it dive-tables.
+* Returing to my code in gitpod i entered the following command in the terminal: heroku login -i.
+* I then entered the following command in the terminal: heroku apps.
+* Followed by the command: heroku git:remote -a dive-tables.
+* I committed any changes and pushed both to my main branch and Heroku using the terminal commands: git push origin main and git push heroku main respectively.
+* In GitHub i clicked on my project dive-tables and went into the settings, there i selcted pages from the menu on the left.
+* In source at the top i clicked the pulldown and selcted 'main'.
+* I then opened Heroku and selected to connect my app via GitHub.
+* This directed me to log into my GitHub and select my project from the list.
+* I was then given the option to deploy.
+* I hit deploy and the program opened in a new tab.
 
 
 ------------------------------------------------------------------
