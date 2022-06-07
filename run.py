@@ -34,7 +34,7 @@ def landing_page():
     print(f"Welcome {user_name}")
     enter_page = input("Press any key to start")
 
-main_menu():    
+# main_menu():
 
 def info_on_tables():
     """
