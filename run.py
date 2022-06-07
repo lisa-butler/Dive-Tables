@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import json
+import time
 
 
 SCOPE = [
@@ -36,11 +37,13 @@ def landing_page():
 
 # main_menu():
 
+
 def info_on_tables():
     """
     Gives the user information on the functionality of the tables
     """
     print("The Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983")
+    time.sleep(1)
     print("They display a mathematical algorithm which outlines the way in which inert gases (specificlly nitrogen), enter and leave the body at different ambient pressures\n")
     print("Dive computers run off many algorithms, the Bühlmann algorithm is one of these")
     print("Recreational divers are not permitted to hit 'decos' or decompression stops, during their dives\n")
@@ -63,10 +66,13 @@ def main_menu():
     Runs main welcome message and optional branches
     """
     print('Welcome to the Buehlmann Table for Air Diving Decompression\n')
-    print('This calculator will provide you with the means to calculate')
-    print('your decompression times or plan a dive\n')
+    time.sleep(1)
+    print('This calculator will provide you with the means to calculate your decompression times or plan a dive\n')
+    time.sleep(1)
     print('You can also access information about the Buehlmann Table and why it was created\n')
+    time.sleep(1)
     print('Would you like to read some information about dive tables? Make a dive plan? Or calculate your deco stops?\n')
+    time.sleep(1)
     options_main = input('For information type "info", for dive planning type "plan" and for deco stop calculation type "deco"\n')
     while main_menu:
         if options_main.lower() == "info":
