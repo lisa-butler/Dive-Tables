@@ -26,25 +26,51 @@ data = Sheet1.get_all_values()
 # six_stop = ""
 
 
-# def main_menu():
-#     """
-#     Runs main welcome message and optional branches
-#     """
-#     print('Welcome to the Buehlmann Table for Air Diving Decompression\n')
-#     print('This calculator will provide you with the means to calculate')
-#     print('your decompression times or plan a dive\n')
-#     print('You can also access information about the Buehlmann Table and why it was created\n')
-#     print('Would you like to read some information about dive tables? Make a dive plan? Or calculate your deco stops?\n')
-#     options_main = input('For information type "info", for dive planning type "plan" and for deco stop calculation type "deco"\n')
-#     if options_main.lower() == "info":
-    #     print("You have selected to view the information page")
-    #     info_on_tables()
-    # elif options_main.lower() == "plan":
-    #     print("You have selected to visit the dive planning page")
-    #     # dive_plannig_main()
-    # elif options_main.lower() == "deco":
-    #     print("You have selected to visit the deco stop calculation page")
-    #     # deco_calculator()
+def info_on_tables():
+    """
+    Gives the user information on the functionality of the tables
+    """
+    print("The Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983")
+    print("They display a mathematical algorithm which outlines the way in which inert gases (specificlly nitrogen), enter and leave the body at different ambient pressures\n")
+    print("Dive computers run off many algorithms, the Bühlmann algorithm is one of these")
+    print("Recreational divers are not permitted to hit 'decos' or decompression stops, during their dives\n")
+    print("Decompression stops are stops that a diver must do when surfacing, they can be at 3m, 6m, 9m or deeper, depending on the depth of dive\n")
+    print("These stops allow the divers body tissues time of 'off-gas' or time for the nitrogen to leave the bodys cells\n")
+    print("Not allowing the body to adequately off-gas can result in an illness nown as decompression sickness or 'the bends\n")
+    print("This is a condition that ranges from mild to life threatening and involves nitrogen bubbles becoming too large in the divers blood and blocking blood and, hence O2, from reaching divers tissues\n")
+    print("Using the Bühlmann tables or diving with a dive computer, we can aim to mitigate these risks and enjoy the wonders of diving!\n")
+    print("Information complete")
+    print("\n")
+
+    exit_info = input('Press any key to return home')
+
+
+# main_menu()
+
+
+def main_menu():
+    """
+    Runs main welcome message and optional branches
+    """
+    print('Welcome to the Buehlmann Table for Air Diving Decompression\n')
+    print('This calculator will provide you with the means to calculate')
+    print('your decompression times or plan a dive\n')
+    print('You can also access information about the Buehlmann Table and why it was created\n')
+    print('Would you like to read some information about dive tables? Make a dive plan? Or calculate your deco stops?\n')
+    options_main = input('For information type "info", for dive planning type "plan" and for deco stop calculation type "deco"\n')
+    if options_main.lower() == "info":
+        print("You have selected to view the information page")
+        print("\n")
+        info_on_tables()
+    elif options_main.lower() == "plan":
+        print("You have selected to visit the dive planning page")
+        # dive_plannig_main()
+    elif options_main.lower() == "deco":
+        print("You have selected to visit the deco stop calculation page")
+        # deco_calculator()
+
+
+main_menu()
 
 
 # def deco_calculator():
@@ -97,70 +123,51 @@ data = Sheet1.get_all_values()
 #                         print(f'3m stop for {three_stop}mins and 6m stop for {six_stop}mins required')
 
 
-# def info_on_tables():
+
+# def dive_planning_main():
 #     """
-#     Gives the user information on the functionality of the tables
+#     Function to allow user to plan their dives based on max depth or max time
 #     """
-#     print("The Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983")
-#     print("They display a mathematical algorithm which outlines the way in which inert gases (specificlly nitrogen), enter and leave the body at different ambient pressures\n")
-#     print("Dive computers run off many algorithms, the Bühlmann algorithm is one of these")
-#     print("Recreational divers are not permitted to hit 'decos' or decompression stops, during their dives\n")
-#     print("Decompression stops are stops that a diver must do when surfacing, they can be at 3m, 6m, 9m or deeper, depending on the depth of dive\n")
-#     print("These stops allow the divers body tissues time of 'off-gas' or time for the nitrogen to leave the bodys cells\n")
-#     print("Not allowing the body to adequately off-gas can result in an illness nown as decompression sickness or 'the bends\n")
-#     print("This is a condition that ranges from mild to life threatening and involves nitrogen bubbles becoming too large in the divers blood and blocking blood and, hence O2, from reaching divers tissues\n")
-#     print("Using the Bühlmann tables or diving with a dive computer, we can aim to mitigate these risks and enjoy the wonders of diving!\n")
-#     print("Information complete")
+#     print("You can use this section to plan your dives based on depths and times\n")
+#     print("As recreational divers without extended range training, hitting a deco stop is not reccomended or covered by insurance\n")
+#     print("You can use this to calculate how long you can stay at your desired depth for without hitting a deco, or how deep you can dive for a set time without hitting a deco\n")
+#     plan = input("If you would like to find the max time for a given depth type 'time' if you would like to find the max depth for a given time type 'depth'\n")
 
-#     exit_info = input('Press any key to return home')
+#     if plan.lower() == 'time':
+#         print('You have selected to work out how long you can stay at a given depth\n')
+#         user_depth = input('Please type depth')
+#         print(f'You have input a depth of {user_depth} meters')
+#         time_calculation()
 
-
-# main_menu()
-
-def dive_planning_main():
-    """
-    Function to allow user to plan their dives based on max depth or max time
-    """
-    print("You can use this section to plan your dives based on depths and times\n")
-    print("As recreational divers without extended range training, hitting a deco stop is not reccomended or covered by insurance\n")
-    print("You can use this to calculate how long you can stay at your desired depth for without hitting a deco, or how deep you can dive for a set time without hitting a deco\n")
-    plan = input("If you would like to find the max time for a given depth type 'time' if you would like to find the max depth for a given time type 'depth'\n")
-
-    if plan.lower() == 'time':
-        print('You have selected to work out how long you can stay at a given depth\n')
-        user_depth = input('Please type depth')
-        print(f'You have input a depth of {user_depth} meters')
-        time_calculation()
-
-    elif plan.lower() == 'depth':
-        print('You have selected to work out how deep you can go for a given time\n')
-        user_time = input('Please type time')
-        print(f'You have input a time of {user_time} minutes')
-        depth_calculation()
+#     elif plan.lower() == 'depth':
+#         print('You have selected to work out how deep you can go for a given time\n')
+#         user_time = input('Please type time')
+#         print(f'You have input a time of {user_time} minutes')
+#         depth_calculation()
 
 
-def time_calculation():
-    """
-    Calculates time for a given depth
-    """        
-    if int(user_depth) > 51:
-        print("Buehlmann tables do not support depths exceeding 51m, please try again")
-    else:
-        for row in data:
-            # column 0 find depth, for this depth find highest time with no deco
-            if (user_depth) <= int(row[0]):
-                if int(row[2]) == 0:
-                    # if int(row[1]) higest value in that section
+# def time_calculation():
+#     """
+#     Calculates time for a given depth
+#     """        
+#     if int(user_depth) > 51:
+#         print("Buehlmann tables do not support depths exceeding 51m, please try again")
+#     else:
+#         for row in data:
+#             # column 0 find depth, for this depth find highest time with no deco
+#             if (user_depth) <= int(row[0]):
+#                 if int(row[2]) == 0:
+#                     # if int(row[1]) higest value in that section
 
 
-def depth_calculation():
-    """
-    Calculates depth for a given time
-    """
-    if int(user_time) > 125:
-        print("Buehlmann tables do not support dives exceeding 125 minutes, please try again")
-    else:
-        for row in data:
-            if (user_time) <= int(row[1]):
-                if int(row[2]) == 0:
-                    # if find maximum dpeth for this time 
+# def depth_calculation():
+#     """
+#     Calculates depth for a given time
+#     """
+#     if int(user_time) > 125:
+#         print("Buehlmann tables do not support dives exceeding 125 minutes, please try again")
+#     else:
+#         for row in data:
+#             if (user_time) <= int(row[1]):
+#                 if int(row[2]) == 0:
+#                     # if find maximum dpeth for this time 
