@@ -25,6 +25,16 @@ data = Sheet1.get_all_values()
 # three_stop = ""
 # six_stop = ""
 
+def landing_page():
+    """
+    First page user encounters before entering program
+    """
+    print("Buehlmann Table for Air Diving Decompression /n")
+    user_name = input("Please enter you name \n")
+    print(f"Welcome {user_name}")
+    enter_page = input("Press any key to start")
+
+main_menu():    
 
 def info_on_tables():
     """
@@ -45,7 +55,7 @@ def info_on_tables():
     exit_info = input('Press any key to return home')
 
 
-# main_menu()
+# main_menu():
 
 
 def main_menu():
@@ -76,6 +86,7 @@ def main_menu():
                 print("Invalid input, please try again")
                 print("\n")
                 main_menu()
+                break
                 
 
 
@@ -95,7 +106,7 @@ main_menu()
 #         inputtedMins = input('Time:')
 
 #         print(f"Depth of {inputtedDepth} meters")
-#         print(f"Time of {inputtedMins} minutes")
+        # print(f"Time of {inputtedMins} minutes")
 
 #         return [inputtedDepth, inputtedMins]
 
