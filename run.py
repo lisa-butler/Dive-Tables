@@ -58,16 +58,26 @@ def main_menu():
     print('You can also access information about the Buehlmann Table and why it was created\n')
     print('Would you like to read some information about dive tables? Make a dive plan? Or calculate your deco stops?\n')
     options_main = input('For information type "info", for dive planning type "plan" and for deco stop calculation type "deco"\n')
-    if options_main.lower() == "info":
-        print("You have selected to view the information page")
-        print("\n")
-        info_on_tables()
-    elif options_main.lower() == "plan":
-        print("You have selected to visit the dive planning page")
-        # dive_plannig_main()
-    elif options_main.lower() == "deco":
-        print("You have selected to visit the deco stop calculation page")
-        # deco_calculator()
+    while main_menu:
+        if options_main.lower() == "info":
+            print("You have selected to view the information page")
+            print("\n")
+            info_on_tables()
+            break
+        elif options_main.lower() == "plan":
+            print("You have selected to visit the dive planning page")
+            # dive_plannig_main()
+        elif options_main.lower() == "deco":
+            print("You have selected to visit the deco stop calculation page")
+            print("\n")
+            # deco_calculator()
+        else:
+            if options_main.lower() != "info" or "plan" or "deco":
+                print("Invalid input, please try again")
+                print("\n")
+                main_menu()
+                
+
 
 
 main_menu()
