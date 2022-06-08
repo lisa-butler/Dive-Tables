@@ -33,4 +33,54 @@ class HelperMethods(object):
         print("Information complete")
         print("\n")
         input("To return home press enter\n")
-        
+
+
+    def dive_planning(self):
+        """
+        Function to allow user to plan their dives based on max depth or max time
+        """
+        print("\nYou can use this section to plan your dives based on depths and times.\n")
+        time.sleep(2)
+        print("As recreational divers without extended range training,\nhitting a deco stop is not reccomended or covered by insurance\n")
+        print("You can use this to calculate how long you can stay\nat your desired depth for without hitting a deco,\nor how deep you can dive for a set time without hitting a deco\n")
+        time.sleep(2)
+        plan = input("If you would like to find the max time for a given depth type 'time'\nIf you would like to find the max depth for a given time type 'depth'\nTo exit type 'exit'\n")
+
+    #     if plan.lower() == 'time':
+    #         print('You have selected to work out how long you can stay at a given depth\n')
+    #         user_depth = input('Please type depth')
+    #         print(f'You have input a depth of {user_depth} meters')
+    #         time_calculation()
+
+    #     elif plan.lower() == 'depth':
+    #         print('You have selected to work out how deep you can go for a given time\n')
+    #         user_time = input('Please type time')
+    #         print(f'You have input a time of {user_time} minutes')
+    #         depth_calculation()
+
+
+    # def time_calculation():
+    #     """
+    #     Calculates time for a given depth
+    #     """        
+    #     if int(user_depth) > 51:
+    #         print("Buehlmann tables do not support depths exceeding 51m, please try again")
+    #     else:
+    #         for row in data:
+    #             # column 0 find depth, for this depth find highest time with no deco
+    #             if (user_depth) <= int(row[0]):
+    #                 if int(row[2]) == 0:
+    #                     # if int(row[1]) higest value in that section
+
+
+    # def depth_calculation():
+    #     """
+    #     Calculates depth for a given time
+    #     """
+    #     if int(user_time) > 125:
+    #         print("Buehlmann tables do not support dives exceeding 125 minutes, please try again")
+    #     else:
+    #         for row in data:
+    #             if (user_time) <= int(row[1]):
+    #                 if int(row[2]) == 0:
+                        # if find maximum dpeth for this time 
