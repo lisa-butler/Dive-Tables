@@ -83,27 +83,38 @@ class HelperMethods(object):
     def time_calculation(self, user_depth, data):
         """
         Calculates time for a given depth
-        """        
+        """  
+        longest_time = 0    
+        larger_number_count = 0  
+        assumed_depth = 0
         if int(user_depth) > 51:
             print("Buehlmann tables do not support depths exceeding 51m, please try again")
         else:
             for row in data:
-                # column 0 find depth, for this depth find highest time with no deco
-                if (user_depth) <= int(row[0]):
-                    if int(row[2]) == 0:
-                        # if int(row[1]) higest value in that section
-                        print(1)
-
+                if row[0] != "meters":
+                    # column 0 find depth, for this depth find highest time with no deco
+                    if int(user_depth) <= int(row[0]):
+                        larger_number_count = larger_number_count+1
+                        if larger_number_count == 1:
+                            assumed_depth = int(row[0])
+                        if assumed_depth == int(row[0]):
+                            if int(row[2]) == 0:
+                                # if int(row[1]) higest value in that section
+                                longest_time = int(row[1])
+            print(f'Max time : {longest_time}')
 
     def depth_calculation(self, user_time, data):
         """
         Calculates depth for a given time
         """
+        deepest_depth = 0
         if int(user_time) > 125:
             print("Buehlmann tables do not support dives exceeding 125 minutes, please try again")
         else:
             for row in data:
-                if (user_time) <= int(row[1]):
-                    if int(row[2]) == 0:
-                        # if find maximum dpeth for this time 
-                        print("poop")
+                if row[0] != "meters":
+                    if int(user_time) <= int(row[1]):
+                        if int(row[2]) == 0:
+                            # if find maximum dpeth for this time 
+                            deepest_depth = int(row[0])
+            print(f"Deepest depth for {user_time} is {deepest_depth}")
