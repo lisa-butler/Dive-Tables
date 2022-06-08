@@ -36,7 +36,7 @@ def landing_page():
     print("\nBuehlmann Tables for Air Diving Decompression\n")
     user_name = getpass.getpass("Please enter your name:\n")
     print(f"Welcome to the Buehlmann Tables {user_name}")
-    input("\nTo proceed, press any key\n")
+    input("\nTo proceed, press Enter\n")
     time.sleep(2)
     main_menu()
 
@@ -61,7 +61,7 @@ def main_menu():
             info_on_tables()
         elif options_main.lower() == "plan":
             print("You have selected to visit the dive planning page")
-            # dive_plannig_main()
+            dive_planning()
         elif options_main.lower() == "deco":
             print("You have selected to visit the deco stop calculation page")
             print("\n")
@@ -69,10 +69,8 @@ def main_menu():
         elif options_main.lower() == "exit":
             break
         else:
-            # if options_main.lower() != "info" or "plan" or "deco":
             print("Invalid input, please try again")
             print("\n")
-            # break
 
 
 def info_on_tables():
@@ -100,6 +98,7 @@ def info_on_tables():
     print("Information complete")
     print("\n")
     input("To return home press enter\n")
+    
 
 
 
@@ -157,14 +156,16 @@ def info_on_tables():
 
 
 
-# def dive_planning_main():
-#     """
-#     Function to allow user to plan their dives based on max depth or max time
-#     """
-#     print("You can use this section to plan your dives based on depths and times\n")
-#     print("As recreational divers without extended range training, hitting a deco stop is not reccomended or covered by insurance\n")
-#     print("You can use this to calculate how long you can stay at your desired depth for without hitting a deco, or how deep you can dive for a set time without hitting a deco\n")
-#     plan = input("If you would like to find the max time for a given depth type 'time' if you would like to find the max depth for a given time type 'depth'\n")
+def dive_planning():
+    """
+    Function to allow user to plan their dives based on max depth or max time
+    """
+    print("\nYou can use this section to plan your dives based on depths and times.\n")
+    time.sleep(2)
+    print("As recreational divers without extended range training,\nhitting a deco stop is not reccomended or covered by insurance\n")
+    print("You can use this to calculate how long you can stay\nat your desired depth for without hitting a deco,\nor how deep you can dive for a set time without hitting a deco\n")
+    time.sleep(2)
+    plan = input("If you would like to find the max time for a given depth type 'time'\nIf you would like to find the max depth for a given time type 'depth'\nTo exit type 'exit'\n")
 
 #     if plan.lower() == 'time':
 #         print('You have selected to work out how long you can stay at a given depth\n')
