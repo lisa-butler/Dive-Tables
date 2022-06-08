@@ -32,6 +32,9 @@ data = Sheet1.get_all_values()
 
 
 def landing_page():
+    """
+    First page the user interracts with
+    """
 
     print("\nBuehlmann Tables for Air Diving Decompression\n")
     user_name = getpass.getpass("Please enter your name:\n")
