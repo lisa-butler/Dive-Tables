@@ -2,6 +2,8 @@ import gspread
 from google.oauth2.service_account import Credentials
 import json
 import time
+import getpass
+import os
 
 
 SCOPE = [
@@ -26,36 +28,22 @@ data = Sheet1.get_all_values()
 # three_stop = ""
 # six_stop = ""
 
-def landing_page():
-    """
-    First page user encounters before entering program
-    """
-    print("Buehlmann Table for Air Diving Decompression /n")
-    user_name = input("Please enter you name \n")
-    print(f"Welcome {user_name}")
-    enter_page = input("Press any key to start")
+
+
+
+# def landing_page():
+
+#     print("\nBuehlmann Tables for Air Diving Decompression\n")
+#     user_name = getpass.getpass("Please enter your name:\n")
+#     print(f"Welcome to the Buehlmann Tables {user_name}")
+
 
 # main_menu():
 
 
-def info_on_tables():
-    """
-    Gives the user information on the functionality of the tables
-    """
-    print("The Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983")
-    time.sleep(1)
-    print("They display a mathematical algorithm which outlines the way in which inert gases (specificlly nitrogen), enter and leave the body at different ambient pressures\n")
-    print("Dive computers run off many algorithms, the Bühlmann algorithm is one of these")
-    print("Recreational divers are not permitted to hit 'decos' or decompression stops, during their dives\n")
-    print("Decompression stops are stops that a diver must do when surfacing, they can be at 3m, 6m, 9m or deeper, depending on the depth of dive\n")
-    print("These stops allow the divers body tissues time of 'off-gas' or time for the nitrogen to leave the bodys cells\n")
-    print("Not allowing the body to adequately off-gas can result in an illness nown as decompression sickness or 'the bends\n")
-    print("This is a condition that ranges from mild to life threatening and involves nitrogen bubbles becoming too large in the divers blood and blocking blood and, hence O2, from reaching divers tissues\n")
-    print("Using the Bühlmann tables or diving with a dive computer, we can aim to mitigate these risks and enjoy the wonders of diving!\n")
-    print("Information complete")
-    print("\n")
 
-    exit_info = input('Press any key to return home')
+    
+    # exit_info = input('Press any key to return home')
 
 
 # main_menu():
@@ -67,19 +55,18 @@ def main_menu():
     """
     print('Welcome to the Buehlmann Table for Air Diving Decompression\n')
     time.sleep(1)
-    print('This calculator will provide you with the means to calculate your decompression times or plan a dive\n')
+    print('This calculator will provide you with the means to;\ncalculate your decompression times or plan a dive\n')
     time.sleep(1)
     print('You can also access information about the Buehlmann Table and why it was created\n')
     time.sleep(1)
-    print('Would you like to read some information about dive tables? Make a dive plan? Or calculate your deco stops?\n')
+    print('Would you like to read some information about dive tables?\nMake a dive plan?\nOr calculate your deco stops?\n')
     time.sleep(1)
-    options_main = input('For information type "info", for dive planning type "plan" and for deco stop calculation type "deco"\n')
-    while main_menu:
+    while True: 
+        options_main = input('For information type "info"\nFor dive planning type "plan"\nFor deco stop calculation type "deco"\nOr to exit type "exit"\n')
         if options_main.lower() == "info":
             print("You have selected to view the information page")
             print("\n")
             info_on_tables()
-            break
         elif options_main.lower() == "plan":
             print("You have selected to visit the dive planning page")
             # dive_plannig_main()
@@ -87,17 +74,44 @@ def main_menu():
             print("You have selected to visit the deco stop calculation page")
             print("\n")
             # deco_calculator()
+        elif options_main.lower() == "exit":
+            break
         else:
-            if options_main.lower() != "info" or "plan" or "deco":
-                print("Invalid input, please try again")
-                print("\n")
-                main_menu()
-                break
-                
+            # if options_main.lower() != "info" or "plan" or "deco":
+            print("Invalid input, please try again")
+            print("\n")
+            # break
+
+
+def info_on_tables():
+    """
+#     Gives the user information on the functionality of the tables
+#     """
+    print("The Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983.")
+    time.sleep(1.5)
+    print("They display a mathematical algorithm which outlines the way in which inert gases\n(specificlly nitrogen), enter and leave the body at different ambient pressures.\n")
+    time.sleep(1.5)
+    print("Dive computers run off many algorithms, the Bühlmann algorithm is one of these.")
+    time.sleep(1.5)
+    print("Recreational divers are not permitted to hit 'decos'\nor decompression stops, during their dives.\n")
+    time.sleep(1)
+    print("Decompression stops are stops that a diver must do when surfacing,\nthey can be at 3m, 6m, 9m or deeper, depending on the depth of dive.\n")
+    time.sleep(1)
+    print("These stops allow the divers body tissues time of 'off-gas'\nor time for the nitrogen to leave the bodys cells.\n")
+    time.sleep(1)
+    print("Not allowing the body time to adequately off-gas can result in\nan illness nown as decompression sickness or 'the bends.\n")
+    time.sleep(1)
+    print("This is a condition that ranges from mild to life threatening\nand involves nitrogen bubbles becoming too large in the divers blood\nand blocking blood and, hence O2, from reaching divers tissues.\n")
+    time.sleep(1)
+    print("Using the Bühlmann tables or diving with a dive computer, we can aim to\nmitigate these risks and enjoy the wonders of diving!\n")
+    time.sleep(2)
+    print("Information complete")
+    print("\n")
+    input("To return home press enter")
 
 
 
-main_menu()
+
 
 
 # def deco_calculator():
@@ -198,3 +212,6 @@ main_menu()
 #             if (user_time) <= int(row[1]):
 #                 if int(row[2]) == 0:
 #                     # if find maximum dpeth for this time 
+
+
+main_menu()
