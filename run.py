@@ -31,22 +31,14 @@ data = Sheet1.get_all_values()
 
 
 
-# def landing_page():
+def landing_page():
 
-#     print("\nBuehlmann Tables for Air Diving Decompression\n")
-#     user_name = getpass.getpass("Please enter your name:\n")
-#     print(f"Welcome to the Buehlmann Tables {user_name}")
-
-
-# main_menu():
-
-
-
-    
-    # exit_info = input('Press any key to return home')
-
-
-# main_menu():
+    print("\nBuehlmann Tables for Air Diving Decompression\n")
+    user_name = getpass.getpass("Please enter your name:\n")
+    print(f"Welcome to the Buehlmann Tables {user_name}")
+    input("\nTo proceed, press any key\n")
+    time.sleep(2)
+    main_menu()
 
 
 def main_menu():
@@ -54,13 +46,13 @@ def main_menu():
     Runs main welcome message and optional branches
     """
     print('Welcome to the Buehlmann Table for Air Diving Decompression\n')
-    time.sleep(1)
+    time.sleep(1.5)
     print('This calculator will provide you with the means to;\ncalculate your decompression times or plan a dive\n')
-    time.sleep(1)
+    time.sleep(1.5)
     print('You can also access information about the Buehlmann Table and why it was created\n')
-    time.sleep(1)
+    time.sleep(1.5)
     print('Would you like to read some information about dive tables?\nMake a dive plan?\nOr calculate your deco stops?\n')
-    time.sleep(1)
+    time.sleep(1.5)
     while True: 
         options_main = input('For information type "info"\nFor dive planning type "plan"\nFor deco stop calculation type "deco"\nOr to exit type "exit"\n')
         if options_main.lower() == "info":
@@ -87,27 +79,27 @@ def info_on_tables():
     """
 #     Gives the user information on the functionality of the tables
 #     """
-    print("The Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983.")
+    print("\nThe Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983.")
     time.sleep(1.5)
     print("They display a mathematical algorithm which outlines the way in which inert gases\n(specificlly nitrogen), enter and leave the body at different ambient pressures.\n")
     time.sleep(1.5)
     print("Dive computers run off many algorithms, the Bühlmann algorithm is one of these.")
     time.sleep(1.5)
     print("Recreational divers are not permitted to hit 'decos'\nor decompression stops, during their dives.\n")
-    time.sleep(1)
+    time.sleep(1.5)
     print("Decompression stops are stops that a diver must do when surfacing,\nthey can be at 3m, 6m, 9m or deeper, depending on the depth of dive.\n")
-    time.sleep(1)
+    time.sleep(1.5)
     print("These stops allow the divers body tissues time of 'off-gas'\nor time for the nitrogen to leave the bodys cells.\n")
-    time.sleep(1)
+    time.sleep(1.5)
     print("Not allowing the body time to adequately off-gas can result in\nan illness nown as decompression sickness or 'the bends.\n")
-    time.sleep(1)
+    time.sleep(1.5)
     print("This is a condition that ranges from mild to life threatening\nand involves nitrogen bubbles becoming too large in the divers blood\nand blocking blood and, hence O2, from reaching divers tissues.\n")
-    time.sleep(1)
+    time.sleep(1.5)
     print("Using the Bühlmann tables or diving with a dive computer, we can aim to\nmitigate these risks and enjoy the wonders of diving!\n")
-    time.sleep(2)
+    time.sleep(1.5)
     print("Information complete")
     print("\n")
-    input("To return home press enter")
+    input("To return home press enter\n")
 
 
 
@@ -214,4 +206,4 @@ def info_on_tables():
 #                     # if find maximum dpeth for this time 
 
 
-main_menu()
+landing_page()
