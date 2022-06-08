@@ -5,7 +5,26 @@ import time
 import getpass
 import os
 
+
 class HelperMethods(object):
+
+    SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+]
+
+    CREDS = Credentials.from_service_account_file('creds.json')
+    SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+    GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+    SHEET = GSPREAD_CLIENT.open('Deco_Table')
+
+    Sheet1 = SHEET.worksheet('Sheet1')
+
+    data = Sheet1.get_all_values()
+
+    def get_data(self):
+        return self.data
 
 
     def info_on_tables(self):
@@ -46,41 +65,45 @@ class HelperMethods(object):
         time.sleep(2)
         plan = input("If you would like to find the max time for a given depth type 'time'\nIf you would like to find the max depth for a given time type 'depth'\nTo exit type 'exit'\n")
 
-    #     if plan.lower() == 'time':
-    #         print('You have selected to work out how long you can stay at a given depth\n')
-    #         user_depth = input('Please type depth')
-    #         print(f'You have input a depth of {user_depth} meters')
-    #         time_calculation()
+        if plan.lower() == 'time':
+            print('You have selected to work out how long you can stay at a given depth\n')
+            user_depth = input('Please type depth')
+            print(f'You have input a depth of {user_depth} meters')
+            self.time_calculation(user_depth, self.data)
 
-    #     elif plan.lower() == 'depth':
-    #         print('You have selected to work out how deep you can go for a given time\n')
-    #         user_time = input('Please type time')
-    #         print(f'You have input a time of {user_time} minutes')
-    #         depth_calculation()
+        elif plan.lower() == 'depth':
+            print('You have selected to work out how deep you can go for a given time\n')
+            user_time = input('Please type time')
+            print(f'You have input a time of {user_time} minutes')
+            self.depth_calculation(user_time, self.data)    
+        else:
+            print('Invalid input')
+            self.dive_planning()
+
+    def time_calculation(self, user_depth, data):
+        """
+        Calculates time for a given depth
+        """        
+        if int(user_depth) > 51:
+            print("Buehlmann tables do not support depths exceeding 51m, please try again")
+        else:
+            for row in data:
+                # column 0 find depth, for this depth find highest time with no deco
+                if (user_depth) <= int(row[0]):
+                    if int(row[2]) == 0:
+                        # if int(row[1]) higest value in that section
+                        print(1)
 
 
-    # def time_calculation():
-    #     """
-    #     Calculates time for a given depth
-    #     """        
-    #     if int(user_depth) > 51:
-    #         print("Buehlmann tables do not support depths exceeding 51m, please try again")
-    #     else:
-    #         for row in data:
-    #             # column 0 find depth, for this depth find highest time with no deco
-    #             if (user_depth) <= int(row[0]):
-    #                 if int(row[2]) == 0:
-    #                     # if int(row[1]) higest value in that section
-
-
-    # def depth_calculation():
-    #     """
-    #     Calculates depth for a given time
-    #     """
-    #     if int(user_time) > 125:
-    #         print("Buehlmann tables do not support dives exceeding 125 minutes, please try again")
-    #     else:
-    #         for row in data:
-    #             if (user_time) <= int(row[1]):
-    #                 if int(row[2]) == 0:
+    def depth_calculation(self, user_time, data):
+        """
+        Calculates depth for a given time
+        """
+        if int(user_time) > 125:
+            print("Buehlmann tables do not support dives exceeding 125 minutes, please try again")
+        else:
+            for row in data:
+                if (user_time) <= int(row[1]):
+                    if int(row[2]) == 0:
                         # if find maximum dpeth for this time 
+                        print("poop")
