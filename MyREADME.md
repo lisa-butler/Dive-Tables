@@ -1,6 +1,8 @@
 # Portfolio Project 3: Python Essentials Project
 ## Dive Tables
+
 ### This command-line interface was built as a Python essentials project as part of the diploma in software development at the code institute. It is designed for academic purposes only.
+
 
 This command-line interface project is built around the concept of a dive computer. Dive planning and decompression control are essential elements of safe diving. The invention of the dive computer has taken much of the guess work out of it in recent years, however, those not diving a computer must utilise an algorithm such as the Buehlmann tables to ensure thir dive is safe.
 
@@ -12,12 +14,12 @@ This project aims to create a simple and interactive dive computer based on the 
 
 ### Lisa Butler
 
-## **[Live Quiz] (https://lisa-butler.github.io/Dive-Quiz/)** CHANGE THIS!!!!!!!!
+## **[Live Terminal] (https://dive-tables.herokuapp.com/)**
 
 
 ------------------------------------------------------------------
 
-## **[Repository](https://github.com/lisa-butler/Dive-Quiz)** CHANGE THIS !!!!
+## **[Repository](https://github.com/lisa-butler/Dive-Tables)**
 
 ------------------------------------------------------------------
 
@@ -42,7 +44,7 @@ This project aims to create a simple and interactive dive computer based on the 
 <a name="ux"></a>
 
 ### **Pre project planning** 
-Before starting this project i investigated the criteria in depth and opted to make an algorithm based project rather than a game or choose your own adventure. I have an interest in how dive computers work and have used dive tables quite a lot in my diver training. I have also found that many people struggle with dive tables and how to work them accurately. This project idea wasformed from this, as an attempt to create an online platform that a user could utilise to make a dive plan or a studnet could test their knowledge with.
+Before starting this project i investigated the criteria in depth and opted to make an algorithm based project rather than a game or choose your own adventure. I have an interest in how dive computers work and have used dive tables quite a lot in my diver training. I have also found that many people struggle with dive tables and how to work them accurately. This project idea wasformed from this, as an attempt to create an online platform that a user could utilise to make a dive plan or a student could test their knowledge with.
 I opted to have an information section in the project to make it a more useful tool for newcomers and those just getting to grips with tables. I also opted to have the option of analysing your decos as well as being able to plan to avoid them. In this way the calculator can be used both premtively and retrospectively.
 
 Lucid charts was used to develop a flow of logic for each option and how it would flow through the code.
