@@ -4,6 +4,7 @@ import json
 import time
 import getpass
 
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -63,19 +64,24 @@ class HelperMethods(object):
         print("As recreational divers without extended range training,\nhitting a deco stop is not reccomended or covered by insurance\n")
         print("You can use this to calculate how long you can stay\nat your desired depth for without hitting a deco,\nor how deep you can dive for a set time without hitting a deco\n")
         time.sleep(2)
-        plan = input("If you would like to find the max time for a given depth type 'time'\nIf you would like to find the max depth for a given time type 'depth'\nTo exit type 'exit'\n")
+        plan = input("If you would like to find the max time for a given depth type 'time'\nIf you would like to find the max depth for a given time type 'depth'\nTo return to main menu type 'home'\n")
 
         if plan.lower() == 'time':
-            print('You have selected to work out how long you can stay at a given depth\n')
+            print('\nYou have selected to work out how long you can stay at a given depth\n')
             user_depth = input('Please type depth')
+            print("\n")
             print(f'You have input a depth of {user_depth} meters')
             self.time_calculation(user_depth, self.data)
 
         elif plan.lower() == 'depth':
-            print('You have selected to work out how deep you can go for a given time\n')
+            print('\nYou have selected to work out how deep you can go for a given time\n')
             user_time = input('Please type time')
+            print("\n")
             print(f'You have input a time of {user_time} minutes')
-            self.depth_calculation(user_time, self.data)    
+            self.depth_calculation(user_time, self.data)
+        elif plan.lower() == "home":
+            print('\nYou have selcted to return to the main menu\n')
+            print("\n")
         else:
             print('Invalid input')
             self.dive_planning()
