@@ -1,7 +1,26 @@
 import json
+from google.oauth2.service_account import Credentials
 from HelperMethods import HelperMethods
+import gspread
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('Deco_Table')
+
+Sheet1 = SHEET.worksheet('Sheet1')
+
+data = Sheet1.get_all_values()
+
 
 class CalcFunctions(object):
+
 
     def calculate_deco(self, inputtedMins, inputtedDepth):
 

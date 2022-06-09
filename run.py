@@ -6,29 +6,21 @@ import getpass
 from HelperMethods import HelperMethods
 from CalcFunctions import CalcFunctions
 
-# SCOPE = [
-#     "https://www.googleapis.com/auth/spreadsheets",
-#     "https://www.googleapis.com/auth/drive.file",
-#     "https://www.googleapis.com/auth/drive"
-# ]
 
-# CREDS = Credentials.from_service_account_file('creds.json')
-# SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-# GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-# SHEET = GSPREAD_CLIENT.open('Deco_Table')
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+]
 
-# Sheet1 = SHEET.worksheet('Sheet1')
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('Deco_Table')
 
-# data = Sheet1.get_all_values()
+Sheet1 = SHEET.worksheet('Sheet1')
 
-
-# #print(data[0][1])
-# inputtedDepth = 0
-# inputtedMins = 0
-# three_stop = ""
-# six_stop = ""
-
-
+data = Sheet1.get_all_values()
 
 
 def landing_page():
@@ -43,8 +35,10 @@ def landing_page():
     time.sleep(2)
     main_menu()
 
+
 helper = HelperMethods()
 calculations = CalcFunctions()
+
 
 def main_menu():
     """
