@@ -23,6 +23,9 @@ class CalcFunctions(object):
 
 
     def calculate_deco(self, inputtedMins, inputtedDepth):
+        """
+        Function to calculate deco stop and what depth it is needed at 
+        """
 
         helper = HelperMethods()
         data = helper.get_data()

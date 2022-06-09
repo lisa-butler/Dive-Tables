@@ -81,14 +81,24 @@ def deco_calculator():
     print('You have selected to calculate if a decompression stop is needed for a given depth and time\n')
     start = input('Would you like to start a calculation y/n')
     if start.lower() == 'y':
-        inputtedDepth = input('Depth:')
-        inputtedMins = input('Time:')
-
-        print(f"Depth of {inputtedDepth} meters")
-        print(f"Time of {inputtedMins} minutes")
-
-
-        calculations.calculate_deco(inputtedMins, inputtedDepth)
+        while True:
+            try:
+                inputtedDepth = int(input("Depth:"))
+                print(f"Depth of {inputtedDepth} meters")
+                break
+            except ValueError:
+                print("Please input a number only")
+                continue
+        while True:
+            try:
+                inputtedMins = int(input("Time:"))
+                print(f"Time of {inputtedMins} minutes")
+                break
+            except ValueError:
+                print("Please input a number only")
+                continue   
+         
+    calculations.calculate_deco(inputtedMins, inputtedDepth)
 
 
 landing_page()
