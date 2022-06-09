@@ -2,6 +2,7 @@ import json
 from google.oauth2.service_account import Credentials
 from HelperMethods import HelperMethods
 import gspread
+import time
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -42,18 +43,49 @@ class CalcFunctions(object):
                             # print(row[2])
                             if int(row[2]) == 0:
                                 # return "No Deco Needed"
-                                print("No decompression stop needed")
+                                print("\nNo decompression stop needed\n")
+                                time.sleep(2)
+                                input("To return to main menu press Enter")
+                                time.sleep(2)
+                                print("\nReturning to main menu\n")
+                                time.sleep(2)
+                                print(".\n")
+                                time.sleep(1)
+                                print(".\n")
+                                time.sleep(1)
+                                print(".\n")
+                                print("\n")
                                 break
                             else:
                                 three_stop = row[2]
                             if int(row[3]) == 0:
                                 # return 3m_stop
-                                print(f'3m stop for {three_stop}mins')
+                                print("\n")
+                                print(f'3 meter stop for {three_stop}mins required')
+                                time.sleep(2)
+                                print("\nReturning to main menu\n")
+                                time.sleep(2)
+                                print(".\n")
+                                time.sleep(1)
+                                print(".\n")
+                                time.sleep(1)
+                                print(".\n")
+                                print("\n")
                                 break
                             else:
                                 six_stop = row[3]
                             if int(row[4]) == 0:
                                 # return 3m_stop
-                                print(f'3m stop for {three_stop}mins and 6m stop for {six_stop}mins required')
+                                print("\n")
+                                print(f'3 meter stop for {three_stop}mins and 6 meter stop for {six_stop}mins required')
+                                time.sleep(2)
+                                print("\nReturning to main menu\n")
+                                time.sleep(2)
+                                print(".\n")
+                                time.sleep(1)
+                                print(".\n")
+                                time.sleep(1)
+                                print(".\n")
+                                print("\n")
 
 
