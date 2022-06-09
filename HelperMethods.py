@@ -68,7 +68,6 @@ class HelperMethods(object):
 
         if plan.lower() == 'time':
             print('\nYou have selected to work out how long you can stay at a given depth\n')
-            print("\n")
             while True:
                 try:
                     user_depth = int(input("Depth:\n"))
@@ -85,8 +84,6 @@ class HelperMethods(object):
 
         elif plan.lower() == 'depth':
             print('\nYou have selected to work out how deep you can go for a given time\n')
-            user_time = input('Please type time')
-            print("\n")
             while True:
                 try:
                     user_time = int(input("Time:\n"))
@@ -128,18 +125,17 @@ class HelperMethods(object):
         else:
             for row in data:
                 if row[0] != "meters":
-                    # column 0 find depth, for this depth find highest time with no deco
                     if int(user_depth) <= int(row[0]):
                         larger_number_count = larger_number_count+1
                         if larger_number_count == 1:
                             assumed_depth = int(row[0])
                         if assumed_depth == int(row[0]):
                             if int(row[2]) == 0:
-                                # if int(row[1]) higest value in that section
                                 longest_time = int(row[1])
             print("\n")   
-            time.sleep(2)                 
-            print(f'Max time you can stay at this depth is: {longest_time}')
+            time.sleep(2)               
+            print(f'Max time you can stay at this depth is: {longest_time} minutes')
+            print("\n")
             time.sleep(2)
             input('\nTo return to main menu hit Enter\n')
             time.sleep(2)
@@ -165,11 +161,12 @@ class HelperMethods(object):
                 if row[0] != "meters":
                     if int(user_time) <= int(row[1]):
                         if int(row[2]) == 0:
-                            # if find maximum dpeth for this time 
                             deepest_depth = int(row[0])
             print("\n")  
-            time.sleep(2)              
-            print(f"Deepest depth for {user_time} minutes is {deepest_depth}")
+            time.sleep(2)    
+            print("\n")          
+            print(f"Deepest depth for {user_time} minutes is {deepest_depth} meters")
+            print("\n")
             time.sleep(2)
             input('\nTo return to main menu hit Enter\n')
             time.sleep(2)
