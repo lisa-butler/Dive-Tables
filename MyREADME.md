@@ -200,6 +200,25 @@ Troubleshooting in this project was predominantly focused around issues related 
 * The outpts given where the program needed to reference the google sheet were correct. Yes.
 
 
+**Error Handling and input control:**
+Error handling and input control were very interesting elements of this project to tackle.
+I encountered potential errors at each input and had to put measures in place to mitigate them.
+
+The initial input is asking for a user name, i worded the welcome message below in such a way that it was still accurate if the user just hit return, for example: the input requests a name, the terminal then prints "Welcome to the Buehlmann Tables {name}". This can be read just as cleanly with the name left blank.
+
+The second set of options where this was encountered was the main menu. The user selects between the options of;
+    deco
+    plan
+    info
+    and exit
+
+In order to ensure that the input was one of these, i used a simple else statement in the else if these options were within. This simply printed "Invalid input, please try again".
+
+The plan options were slightly more difficult to account for. I needed to ensure that the dept did not exceed 51m and the time did not exceed 125 minutes, as these tables do no account for values outside of this range. I did this by having the program check if they were >125 or >51. I then needed to ensure that the inputs were numbers only. This was done using the except ValueError function inside a while statement. This proved to be a very efficient way of doing this and held up to testing.
+
+The same methods as above were used to ensure that the numbers inputted for the deco calculations were both >51 and >125 and also that they were numbers.
+
+
 <!-- **Testing using Google Lighthouse:**
 
 Testing with Lighthouse was straightforward and did not raise any significant issues.
@@ -236,8 +255,7 @@ Some interesting bugs were;
 
  <!-- screenshot of infinite loop -->
 
- Functions not being called due to being below the current function. As pyhton reads through code top to bottom, it did not know these functions existed. 
- <!-- This was fixed by -->
+Initially i had all of my functions in one file run.py, I eventully decided to break them out into classes in different files and this dramatically improved the ease with which i could fix errors.
 
 
 
@@ -270,7 +288,7 @@ Deployment of the program was done via github and Heroku;
 
 ### **Credits:**
 
-* Code: Code advice was taken from Stack Overflow (https://www.w3schools.com/) and the Code Institutes workthrough projct and course content.
+* Code: Code advice was taken from Stack Overflow (https://stackoverflow.com/) and the Code Institutes workthrough projct and course content.
 * Information: Some information was taken from dive-tach (http://www.dive-tech.co.uk/workman%20and%20buhlmann.htm) and from Dip N Dive (https://dipndive.com/blogs/dive-gear/dive-computer-algorithms-for-dummies).
 
 
