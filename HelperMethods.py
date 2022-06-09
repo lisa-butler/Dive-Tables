@@ -68,20 +68,50 @@ class HelperMethods(object):
 
         if plan.lower() == 'time':
             print('\nYou have selected to work out how long you can stay at a given depth\n')
-            user_depth = input('Please type depth')
             print("\n")
-            print(f'You have input a depth of {user_depth} meters')
+            while True:
+                try:
+                    user_depth = int(input("Depth:\n"))
+                    print("\n")
+                    print(f"Depth of {user_depth} meters")
+                    print("\n")
+                    time.sleep(1.5)
+                    break
+                except ValueError:
+                    print("\nPlease input a number only\n")
+                    continue
+
             self.time_calculation(user_depth, self.data)
 
         elif plan.lower() == 'depth':
             print('\nYou have selected to work out how deep you can go for a given time\n')
             user_time = input('Please type time')
             print("\n")
-            print(f'You have input a time of {user_time} minutes')
+            while True:
+                try:
+                    user_time = int(input("Time:\n"))
+                    print("\n")
+                    print(f"Time of {user_time} minutes")
+                    print("\n")
+                    time.sleep(1.5)
+                    break
+                except ValueError:
+                    print("Please input a number only")
+                    continue
             self.depth_calculation(user_time, self.data)
         elif plan.lower() == "home":
-            print('\nYou have selcted to return to the main menu\n')
             print("\n")
+            time.sleep(1.5)
+            print('\nYou have selcted to return to the main menu\n')
+            time.sleep(2)
+            print("\n")
+            print("\nReturning to main menu\n")
+            time.sleep(2)
+            print(".")
+            time.sleep(2)
+            print(".")
+            time.sleep(2)
+            print("\n.\n")
         else:
             print('Invalid input')
             self.dive_planning()
@@ -107,7 +137,21 @@ class HelperMethods(object):
                             if int(row[2]) == 0:
                                 # if int(row[1]) higest value in that section
                                 longest_time = int(row[1])
-            print(f'Max time : {longest_time}')
+            print("\n")   
+            time.sleep(2)                 
+            print(f'Max time you can stay at this depth is: {longest_time}')
+            time.sleep(2)
+            input('\nTo return to main menu hit Enter\n')
+            time.sleep(2)
+            print("\n")
+            print("\nReturning to main menu\n")
+            time.sleep(2)
+            print(".")
+            time.sleep(2)
+            print(".")
+            time.sleep(2)
+            print("\n.\n")
+
 
     def depth_calculation(self, user_time, data):
         """
@@ -123,4 +167,18 @@ class HelperMethods(object):
                         if int(row[2]) == 0:
                             # if find maximum dpeth for this time 
                             deepest_depth = int(row[0])
-            print(f"Deepest depth for {user_time} is {deepest_depth}")
+            print("\n")  
+            time.sleep(2)              
+            print(f"Deepest depth for {user_time} minutes is {deepest_depth}")
+            time.sleep(2)
+            input('\nTo return to main menu hit Enter\n')
+            time.sleep(2)
+            print("\n")
+            print("\nReturning to main menu\n")
+            time.sleep(2)
+            print(".")
+            time.sleep(2)
+            print(".")
+            time.sleep(2)
+            print("\n.\n")
+
