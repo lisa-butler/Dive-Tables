@@ -77,6 +77,8 @@ def deco_calculator():
     """
     Requests diver to input their depth and time
     """
+    inputedDepth = 0
+    inputtedMins = 0
 
     print('You have selected to calculate if a decompression stop is needed for a given depth and time\n')
     start = input('Would you like to start a calculation y/n')
