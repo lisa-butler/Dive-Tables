@@ -96,7 +96,9 @@ def deco_calculator():
     inputedDepth = 0
     inputtedMins = 0
 
-    print('You have selected to calculate if a decompression stop is needed for a given depth and time\n')
+    print("\n")
+    time.sleep(2)
+    print('\nUse this page to calculate if a decompression stop is \nneeded for a given depth and time\n')
     
     start = input('Would you like to start a calculation y/n')
     if start.lower() == 'y':

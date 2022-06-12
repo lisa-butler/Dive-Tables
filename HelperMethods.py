@@ -34,7 +34,7 @@ class HelperMethods(object):
     #     """
         print('\nThe Bühlmann tables were created by Dr. Albert A. Bühlmann, a swiss physician in 1983.')
         time.sleep(1.5)
-        print('They display a mathematical algorithm which outlines the way in which inert gases\n(specificlly nitrogen), enter and leave the body at different ambient pressures.\n')
+        print('They display a mathematical algorithm which outlines the way in which \ninert gases (specificlly nitrogen), enter and \nleave the body at different ambient pressures.\n')
         time.sleep(1.5)
         print('Dive computers run off many algorithms, the Bühlmann algorithm is one of these.')
         time.sleep(1.5)
@@ -70,6 +70,7 @@ class HelperMethods(object):
         print('\nYou can use this to calculate how long you can stay\nat your desired depth for without hitting a deco,\nor how deep you can dive for a set time without hitting a deco\n')
         time.sleep(2)
         print("\n")
+        time.sleep(1.5)
         plan = input('\nIf you would like to find the max time for a given depth type "time"\nIf you would like to find the max depth for a given time type "depth"\nTo return to main menu type "home"\n')
 
         if plan.lower() == 'time':
