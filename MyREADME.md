@@ -12,6 +12,10 @@ All computers operate off an algorithm that woks out how long a diver can stay a
 
 This project aims to create a simple and interactive dive computer based on the Buehlmann tables that can be used to plan and calculate depths, times and decos. This can provide an understanding of how dive computers work as well as aiding in dive planning and understanding the tables.
 
+An image of the tables that this project is based on can be viewed below.
+
+![Dive Tables](images/tables.jpg)
+
 ### Lisa Butler
 
 ## **[Live Terminal] (https://dive-tables.herokuapp.com/)**
