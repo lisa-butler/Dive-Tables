@@ -36,13 +36,11 @@ class CalcFunctions(object):
         else:
             for row in data:
                 if row[0] != "meters":
-                    # print(int(row[0]))
                     if int(inputtedDepth) <= int(row[0]):
-                        # print(row[1])
                         if int(inputtedMins) <= int(row[1]):
-                            # print(row[2])
                             if int(row[2]) == 0:
                                 # return "No Deco Needed"
+                                print
                                 print("\nNo decompression stop needed\n")
                                 time.sleep(2)
                                 input("To return to main menu press Enter")
@@ -75,7 +73,7 @@ class CalcFunctions(object):
                             else:
                                 six_stop = row[3]
                             if int(row[4]) == 0:
-                                # return 3m_stop
+                                # return 3m_stop and 6m_stop
                                 print("\n")
                                 print(f'3 meter stop for {three_stop}mins and 6 meter stop for {six_stop}mins required')
                                 time.sleep(2)
@@ -87,5 +85,3 @@ class CalcFunctions(object):
                                 time.sleep(1)
                                 print(".\n")
                                 print("\n")
-
-

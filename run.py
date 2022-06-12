@@ -80,27 +80,44 @@ def deco_calculator():
     inputedDepth = 0
     inputtedMins = 0
 
-    print('You have selected to calculate if a decompression stop is needed for a given depth and time\n')
-    start = input('Would you like to start a calculation y/n')
-    if start.lower() == 'y':
-        while True:
-            try:
-                inputtedDepth = int(input("Depth:"))
-                print(f"Depth of {inputtedDepth} meters")
-                break
-            except ValueError:
-                print("Please input a number only")
-                continue
-        while True:
-            try:
-                inputtedMins = int(input("Time:"))
-                print(f"Time of {inputtedMins} minutes")
-                break
-            except ValueError:
-                print("Please input a number only")
-                continue   
+    print('''You have selected to calculate if a decompression stop is needed 
+    for a given depth and time\n''')
+    while True:
+        start = input('Would you like to start a calculation y/n')
+        if start.lower() == 'y':
+            while True:
+                try:
+                    inputtedDepth = int(input("Depth:"))
+                    print(f"Depth of {inputtedDepth} meters")
+                    break
+                except ValueError:
+                    print("Please input a number only")
+                    continue
+            while True:
+                try:
+                    inputtedMins = int(input("Time:"))
+                    print(f"Time of {inputtedMins} minutes")
+                    break
+                except ValueError:
+                    print("Please input a number only")
+                    continue   
+        elif start.lower() == 'n':
+            print("\nReturning to main menu\n")
+            time.sleep(2)
+            print("\n")
+            print("\n")
+            print("\n")
+            print("\n")
+            print("\n")
+            print("\n")
+            print("\n")
+            print("\n")
+            main_menu()
+        else:
+            print("Invalid input, please try again")
+            print("\n")    
          
-    calculations.calculate_deco(inputtedMins, inputtedDepth)
+        calculations.calculate_deco(inputtedMins, inputtedDepth)
 
 
 landing_page()
