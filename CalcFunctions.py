@@ -33,7 +33,7 @@ class CalcFunctions(object):
 
         if int(inputtedMins) > 125 or int(inputtedDepth) > 51:
             print('''Buehlmann tables do not support depths exceeding 51m and
-             dives exceeding 125 minutes, please try again''')
+             dives exceeding 125 minutes, please try again''')    
         else:
             for row in data:
                 if row[0] != "meters":
@@ -123,3 +123,20 @@ class CalcFunctions(object):
                                 time.sleep(2)
                                 print("\n")
                                 break
+                        elif int(inputtedMins) > int(row[1]):
+                            print("\n")
+                            time.sleep(2)
+                            print("\nMax time for this depth exceeded\n")
+                            input("\nTo return to main menu hit Enter")
+                            time.sleep(2)
+                            print("\nReturning to main menu\n")
+                            time.sleep(2)
+                            print("\n")
+                            time.sleep(1)
+                            print("\n")
+                            time.sleep(1)
+                            print("\n")
+                            time.sleep(2)
+                            print("\n")
+
+                            break      
