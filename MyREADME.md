@@ -178,6 +178,10 @@ The languages used in this project were;
 * Lucid Chart was used to plan the flow of my code.
 * Heroku was used to deploy my project.
 
+### **Testing software used:**
+
+* I used PEP8 to test 
+
 
 ------------------------------------------------------------------
 
@@ -219,29 +223,9 @@ The plan options were slightly more difficult to account for. I needed to ensure
 The same methods as above were used to ensure that the numbers inputted for the deco calculations were both >51 and >125 and also that they were numbers.
 
 
-<!-- **Testing using Google Lighthouse:**
+**Testing using PEP8:**
 
-Testing with Lighthouse was straightforward and did not raise any significant issues.
-
-![Lighthouse test](images/lighthousetest.jpg)
-
-**Testing using W3C Validator:**
-
-Testing with W3C Validator came back with no errors or warnings. 
-
-![W3C Validator test](images/w3ctest.jpg)
-
-**Testing using Jigsaw:**
-
-Testing with CSS Jigsaw validator showed no errors.
-
-![Jigsaw test](images/jigsawtest.jpg)
-
-**Testing using W3C jsHint:**
-
-Testing with jsHint showed 47 warnings. These were all pertaining to the version of javascript that was being used, suggesting that version 6 needs to be run for these functions to work effectively. As i used version 6 to write the code and some research showed that this will vary device to device, i did not pursue this issue.
-
-![jsHint test](images/jshinttest.jpg) -->
+I used the software PEP8 to test each python file individually. The results were all errors pertaining to line length being too long and trailingg white spaces. I broke the lines up by using ''' but could not remedy the whitespaces without removing spaces from between words.
 
 ## Bugs
 
@@ -249,13 +233,13 @@ Testing with jsHint showed 47 warnings. These were all pertaining to the version
 
 ### **Bugs Found:**
 
-!!!!!once deco used gets caught in loop
 
 Some interesting bugs were;
 
  An infinite loop within a while statement that continued to print a statement eternally until the terminal was shut down. This was fixed by calling the function again after printing the error message once and then breaking the loop.
 
  <!-- screenshot of infinite loop -->
+ Another bug that was occuring was particularly interesting and difficult to find. After a user had calculated a deco and returned to the main maenu, the program remained in a loop and would only return 'No deco needed' to any input. This was solved by having the exit function in the main menu call the landing page function.
 
 Initially i had all of my functions in one file run.py, I eventully decided to break them out into classes in different files and this dramatically improved the ease with which i could fix errors.
 
