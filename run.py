@@ -62,21 +62,30 @@ def main_menu():
     while True: 
         options_main = input('For information type "info"\nFor dive planning type "plan"\nFor deco stop calculation type "deco"\nOr to exit type "exit"\n')
         if options_main.lower() == "info":
-            print("You have selected to view the information page")
             print("\n")
+            print("\nYou have selected to view the information page\n")
+            print("\n")
+            time.sleep(1)
             helper.info_on_tables()
         elif options_main.lower() == "plan":
-            print("You have selected to visit the dive planning page")
+            print("\n")
+            print("\nYou have selected to visit the dive planning page\n")
+            print("\n")
+            time.sleep(1)
             helper.dive_planning()
         elif options_main.lower() == "deco":
-            print("You have selected to visit the deco stop calculation page")
             print("\n")
+            print("\nYou have selected to visit the deco stop calculation page\n")
+            print("\n")
+            time.sleep(1)
             deco_calculator()
         elif options_main.lower() == "exit":
+            time.sleep(1)
             landing_page()
             break
         else:
-            print("Invalid input, please try again")
+            print("\n")
+            print("\nInvalid input, please try again\n")
             print("\n")
 
 
