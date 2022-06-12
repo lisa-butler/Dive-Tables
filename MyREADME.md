@@ -36,7 +36,7 @@ This project aims to create a simple and interactive dive computer based on the 
 
 
 
-![Quiz Start Page](images/startpage.jpg)
+![Terminal Launch Page](images/start_terminal.jpg)
 
 
 ## User Experience 
@@ -84,8 +84,6 @@ A main menu or landing menu was opted for as it provided the opportunity to have
 **Info option:**
 The information option provided the user with a more in depth way to explore the logic behind dive tables and was a way for the developer to explain how the dive table algorithm works and why it is used in the first place. A simple line by line readout was used to provide the user with the information in a steady fashion. The option to return home was presented at the end.
 
-![Initial logic test](images/initialqtest.jpg)
-
 
 **Dive planning option:**
 The dive planning option was created secondary to the deco calculationn option. It was made into its own element as it is very often the case that divers will be planning their dive and opt to dive a certain feature that they know is in a set depth, they will need to calculate how long they will have on this feature (eg. a wreck) before they will hit a deco. Thus, having a time calculation based on a desired depth was a beneficial option. 
@@ -98,14 +96,12 @@ The deco calculator option was put in as a way for divers to both learn about de
 **Flow chart:**
 Lucid charts was used to generate a flow chart of the program and to plan how to create the code. This was helpful in working out how i wanted the program to flow and where i would need to branch the code to take the user to different options.
 
-![Wire frame of quiz page](images/wireframequizq.jpg)
+![Lucid Charts Flow Chart](images/flow_chart.jpg)
 
 
 ### **Style**
 
 This program is designed to be a simple command line interface and reflects this in its styling. Spacing was left between sentences to allow for better readability and inputs were clearly indicated. 
-
-![Background](images/underwater.jpg)
 
 **Fonts:**
 Fonts were the basic command line fonts and were checked to ensure that they were clear and easy to read.
@@ -118,7 +114,6 @@ Fonts were the basic command line fonts and were checked to ensure that they wer
 
 ### **Main menu**
 
-![Start P](images/startpage.jpg)
 
 The main menu features a brief print statement that welcomes the user and declares what this program is designed to do. It then gives the user three options;
 
@@ -130,13 +125,11 @@ These options are presented and then an input is requested. The user is asked to
 When the user types their selection and hits enter the program replies with 'You have selected to visit the x page'.
 
 
-
 ### **Info Option:**
 The info page provides information about the tables to the user in a clear and measured way. It then waits on the screen and propts the user to press any key to return home when they have finished reading. By asking the user to signal that they have finished reading by pressing any key, we prevent the program from moving on before they have finished reading.
 
 ### **Dive planning Option**
 
-![Quiz Page](images/quizpage.jpg)
 
 The dive planning option takes the user to a section that gives them the option to select to plan their dive based on depth or time. When they user makes a selction of time, the program prints 'You have selected to work out how long you can stay at a given depth'. When the suer selects to work out how deep they can be for their dive, the program prints 'You have selected to work out how deep you can go for a given time'.
 The user is then propted to imput either their set depth or time and the program reads back to them this selection before directing them to the function that calculates depth or time respectively.
@@ -228,6 +221,8 @@ The same methods as above were used to ensure that the numbers inputted for the 
 I used the software PEP8 to test each python file individually. The results were all errors pertaining to line length being too long and trailing white spaces. I broke the lines up by using ''' but could not remedy the whitespaces without removing spaces from between words. When i deployed with the lines broken they were displayig wrong so i decided to return them to their previous state as i did not have time to seek another way to solve the line too long error.
 No other errors were present.
 
+![PEP8 Testing](images/pep8.jpg)
+
 ## Bugs
 
 <a name="bugs"></a>
@@ -239,7 +234,8 @@ Some interesting bugs were;
 
  An infinite loop within a while statement that continued to print a statement eternally until i hit cntrl + c. This was fixed by calling the function again after printing the error message once and then breaking the loop.
 
- <!-- screenshot of infinite loop -->
+ ![Infinite loop error](images/infinite_loop.jpg)
+
  Another bug that was occuring was particularly interesting and difficult to find. After a user had calculated a deco and returned to the main menu, the program remained in a loop and would only return 'No deco needed' to any input. This was solved by having the exit function in the main menu call the landing page function.
 
 Initially i had all of my functions in one file run.py, I eventully decided to break them out into classes in different files and this dramatically improved the ease with which i could fix errors.
@@ -277,8 +273,6 @@ Deployment of the program was done via github and Heroku;
 
 * Code: Code advice was taken from Stack Overflow (https://stackoverflow.com/) and the Code Institutes workthrough projct and course content.
 * Information: Some information was taken from dive-tach (http://www.dive-tech.co.uk/workman%20and%20buhlmann.htm) and from Dip N Dive (https://dipndive.com/blogs/dive-gear/dive-computer-algorithms-for-dummies).
-
-
 
 
 ### **Acknowledgements:** 
