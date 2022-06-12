@@ -46,14 +46,17 @@ def main_menu():
     """
     print('Welcome to the Buehlmann Table for Air Diving Decompression\n')
     time.sleep(1.5)
-    print('This calculator will provide you with the means to;\ncalculate your decompression times or plan a dive\n')
+    print('''This calculator will provide you with the means to;\ncalculate your 
+    decompression times or plan a dive\n''')
     time.sleep(1.5)
     print('You can also access information about the Buehlmann Table and why it was created\n')
     time.sleep(1.5)
-    print('Would you like to read some information about dive tables?\nMake a dive plan?\nOr calculate your deco stops?\n')
+    print('''Would you like to read some information about dive tables?\nMake a 
+    dive plan?\nOr calculate your deco stops?\n''')
     time.sleep(1.5)
     while True: 
-        options_main = input('For information type "info"\nFor dive planning type "plan"\nFor deco stop calculation type "deco"\nOr to exit type "exit"\n')
+        options_main = input('''For information type "info"\nFor dive planning type 
+        "plan"\nFor deco stop calculation type "deco"\nOr to exit type "exit"\n''')
         if options_main.lower() == "info":
             print("You have selected to view the information page")
             print("\n")
@@ -66,6 +69,7 @@ def main_menu():
             print("\n")
             deco_calculator()
         elif options_main.lower() == "exit":
+            landing_page()
             break
         else:
             print("Invalid input, please try again")
@@ -101,6 +105,7 @@ def deco_calculator():
                 except ValueError:
                     print("Please input a number only")
                     continue   
+            calculations.calculate_deco(inputtedMins, inputtedDepth)    
         elif start.lower() == 'n':
             print("\nReturning to main menu\n")
             time.sleep(2)
@@ -117,7 +122,5 @@ def deco_calculator():
             print("Invalid input, please try again")
             print("\n")    
          
-        calculations.calculate_deco(inputtedMins, inputtedDepth)
-
-
+         
 landing_page()

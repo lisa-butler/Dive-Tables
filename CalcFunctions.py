@@ -32,7 +32,8 @@ class CalcFunctions(object):
         data = helper.get_data()
 
         if int(inputtedMins) > 125 or int(inputtedDepth) > 51:
-            print("Buehlmann tables do not support depths exceeding 51m and dives exceeding 125 minutes, please try again")
+            print('''Buehlmann tables do not support depths exceeding 51m and
+             dives exceeding 125 minutes, please try again''')
         else:
             for row in data:
                 if row[0] != "meters":
@@ -59,7 +60,7 @@ class CalcFunctions(object):
                             if int(row[3]) == 0:
                                 # return 3m_stop
                                 print("\n")
-                                print(f'3 meter stop for {three_stop}mins required')
+                                print(f'3 meter stop for {three_stop}minutes required')
                                 time.sleep(2)
                                 print("\nReturning to main menu\n")
                                 time.sleep(2)
@@ -75,7 +76,7 @@ class CalcFunctions(object):
                             if int(row[4]) == 0:
                                 # return 3m_stop and 6m_stop
                                 print("\n")
-                                print(f'3 meter stop for {three_stop}mins and 6 meter stop for {six_stop}mins required')
+                                print(f'3 meter stop for {three_stop}minutes and 6 meter stop for {six_stop}minutes required')
                                 time.sleep(2)
                                 print("\nReturning to main menu\n")
                                 time.sleep(2)

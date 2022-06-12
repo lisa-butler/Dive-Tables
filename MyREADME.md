@@ -249,6 +249,8 @@ Testing with jsHint showed 47 warnings. These were all pertaining to the version
 
 ### **Bugs Found:**
 
+!!!!!once deco used gets caught in loop
+
 Some interesting bugs were;
 
  An infinite loop within a while statement that continued to print a statement eternally until the terminal was shut down. This was fixed by calling the function again after printing the error message once and then breaking the loop.
