@@ -27,10 +27,14 @@ def landing_page():
     """
     First page the user interracts with
     """
-
-    print("\nBuehlmann Tables for Air Diving Decompression\n")
+    print("\n")
+    print("\n-------------------------------------------------\n")
+    print("Buehlmann Tables for Air Diving Decompression")
+    print("\n-------------------------------------------------\n")
     user_name = getpass.getpass("Please enter your name:\n")
     print(f"Welcome to the Buehlmann Tables {user_name}")
+    time.sleep(2)
+    print("\n")
     input("\nTo proceed, press Enter\n")
     time.sleep(2)
     main_menu()
@@ -44,7 +48,10 @@ def main_menu():
     """
     Runs main welcome message and optional branches
     """
-    print('Welcome to the Buehlmann Table for Air Diving Decompression\n')
+    print("\n")
+    print("\n")
+    print("\n")
+    print('\nWelcome to the Buehlmann Table for Air Diving Decompression\n')
     time.sleep(1.5)
     print('This calculator will provide you with the means to;\ncalculate your decompression times or plan a dive\n')
     time.sleep(1.5)
@@ -81,42 +88,45 @@ def deco_calculator():
     inputtedMins = 0
 
     print('You have selected to calculate if a decompression stop is needed for a given depth and time\n')
-    while True:
-        start = input('Would you like to start a calculation y/n')
-        if start.lower() == 'y':
-            while True:
-                try:
-                    inputtedDepth = int(input("Depth:"))
-                    print(f"Depth of {inputtedDepth} meters")
-                    break
-                except ValueError:
-                    print("Please input a number only")
-                    continue
-            while True:
-                try:
-                    inputtedMins = int(input("Time:"))
-                    print(f"Time of {inputtedMins} minutes")
-                    break
-                except ValueError:
-                    print("Please input a number only")
-                    continue 
-            calculations.calculate_deco(inputtedMins, inputtedDepth)
-            break
-        elif start.lower() == 'n':
-            print("\nReturning to main menu\n")
-            time.sleep(2)
-            print("\n")
-            print("\n")
-            print("\n")
-            print("\n")
-            print("\n")
-            print("\n")
-            print("\n")
-            print("\n")
-            main_menu()
-        else:
-            print("Invalid input, please try again")
-            print("\n") 
-            break
+    
+    start = input('Would you like to start a calculation y/n')
+    if start.lower() == 'y':
+        while True:
+            try:
+                inputtedDepth = int(input("Depth:"))
+                print(f"Depth of {inputtedDepth} meters")
+                break
+            except ValueError:
+                print("Please input a number only")
+                continue
+        while True:
+            try:
+                inputtedMins = int(input("Time:"))
+                print(f"Time of {inputtedMins} minutes")
+                break
+            except ValueError:
+                print("Please input a number only")
+                continue
+        calculations.calculate_deco(inputtedMins, inputtedDepth)     
+    elif start.lower() == 'n':
+        print("\nReturning to main menu\n")
+        time.sleep(2)
+        print("\n")
+        print("\n")
+        print("\n")
+        print("\n")
+        print("\n")
+        print("\n")
+        print("\n")
+        print("\n")
+        main_menu()
+    else:
+        print("\n")
+        print("\nInvalid input, please try again")
+        print("\n")
+        deco_calculator()
+
+   
+
 
 landing_page()
