@@ -44,7 +44,7 @@ class HelperMethods(object):
         time.sleep(1.5)
         print('These stops allow the divers body tissues time of "off-gas"\nor time for the nitrogen to leave the bodys cells.\n')
         time.sleep(1.5)
-        print('Not allowing the body time to adequately off-gas can result in\nan illness nown as decompression sickness or "the bends"s.\n')
+        print('Not allowing the body time to adequately off-gas can result in\nan illness nown as decompression sickness or "the bends".\n')
         time.sleep(1.5)
         print('This is a condition that ranges from mild to life threatening\nand involves nitrogen bubbles becoming too large in the divers blood\nand blocking blood and, hence O2, from reaching divers tissues.\n')
         time.sleep(1.5)
@@ -53,10 +53,9 @@ class HelperMethods(object):
         print("\nInformation complete\n")
         time.sleep(2)
         print("\n")
-        input("\nTo return home press enter\n")
+        input("\nTo return to main menu hit Enter\n")
         time.sleep(2)
         print("\n")
-        main_menu()
 
 
     def dive_planning(self):

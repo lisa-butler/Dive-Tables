@@ -180,7 +180,7 @@ The languages used in this project were;
 
 ### **Testing software used:**
 
-* I used PEP8 to test 
+* I used PEP8 to test my program (http://pep8online.com/).
 
 
 ------------------------------------------------------------------
@@ -225,7 +225,8 @@ The same methods as above were used to ensure that the numbers inputted for the 
 
 **Testing using PEP8:**
 
-I used the software PEP8 to test each python file individually. The results were all errors pertaining to line length being too long and trailingg white spaces. I broke the lines up by using ''' but could not remedy the whitespaces without removing spaces from between words.
+I used the software PEP8 to test each python file individually. The results were all errors pertaining to line length being too long and trailing white spaces. I broke the lines up by using ''' but could not remedy the whitespaces without removing spaces from between words. When i deployed with the lines broken they were displayig wrong so i decided to return them to their previous state as i did not have time to seek another way to solve the line too long error.
+No other errors were present.
 
 ## Bugs
 
@@ -236,10 +237,10 @@ I used the software PEP8 to test each python file individually. The results were
 
 Some interesting bugs were;
 
- An infinite loop within a while statement that continued to print a statement eternally until the terminal was shut down. This was fixed by calling the function again after printing the error message once and then breaking the loop.
+ An infinite loop within a while statement that continued to print a statement eternally until i hit cntrl + c. This was fixed by calling the function again after printing the error message once and then breaking the loop.
 
  <!-- screenshot of infinite loop -->
- Another bug that was occuring was particularly interesting and difficult to find. After a user had calculated a deco and returned to the main maenu, the program remained in a loop and would only return 'No deco needed' to any input. This was solved by having the exit function in the main menu call the landing page function.
+ Another bug that was occuring was particularly interesting and difficult to find. After a user had calculated a deco and returned to the main menu, the program remained in a loop and would only return 'No deco needed' to any input. This was solved by having the exit function in the main menu call the landing page function.
 
 Initially i had all of my functions in one file run.py, I eventully decided to break them out into classes in different files and this dramatically improved the ease with which i could fix errors.
 
