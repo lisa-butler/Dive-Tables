@@ -60,6 +60,7 @@ Lucid charts was used to develop a flow of logic for each option and how it woul
 
 **Strategy:**
 Determining the best approach meant investigating the needs of the potential users. This included the needs of the divers looking to plan their dives and calculate their decos and the students looking to learn about dive tables and to input different values to see the outcome.
+
 **User stories:**
 As a qualified diver:
 I want to be able to input my depth and time and find out if i would have hit a deco stop and at what depth.
@@ -89,10 +90,8 @@ UI was very basic for this project as it was a simple command line interface. Ho
 **Main menu:**
 A main menu or landing menu was opted for as it provided the opportunity to have an introduction to the page and alert the user to the options avalible within the program. This served as the 'home page' and etablished what the program was for and how to select various options.
 
-
 **Info option:**
 The information option provided the user with a more in depth way to explore the logic behind dive tables and was a way for the developer to explain how the dive table algorithm works and why it is used in the first place. A simple line by line readout was used to provide the user with the information in a steady fashion. The option to return home was presented at the end.
-
 
 **Dive planning option:**
 The dive planning option was created secondary to the deco calculationn option. It was made into its own element as it is very often the case that divers will be planning their dive and opt to dive a certain feature that they know is in a set depth, they will need to calculate how long they will have on this feature (eg. a wreck) before they will hit a deco. Thus, having a time calculation based on a desired depth was a beneficial option. 
@@ -101,12 +100,10 @@ When diving for a set time frame, divers may like to check that they wont run in
 **Deco calculator option:**
 The deco calculator option was put in as a way for divers to both learn about deco stops and as a way for divers to calculate their decos before or after a dive. The primary function of the deco calculator was to demonstrate the functionality of a dive computer. However, it can be used in this context; If i was planning a dive to 30m and knew that i would be down there for 35 minutes, i would need to check what decos i would be hitting. By inputting these numbers into the calculator, i would see that i would need to do a 4 munute stop at 6m and an 11 minute stop at 3m. These times would then be factored into my plan to enable me to ensure that i had enough breathing gas to achieve this. As most recreational divers should not be hitting deco stops, the calclator should primarily be used to double check computer readings.
 
-
 **Flow chart:**
 Lucid charts was used to generate a flow chart of the program and to plan how to create the code. This was helpful in working out how i wanted the program to flow and where i would need to branch the code to take the user to different options.
 
 ![Lucid Charts Flow Chart](images/flow_chart.jpg)
-
 
 ### **Style**
 
@@ -122,8 +119,6 @@ Fonts were the basic command line fonts and were checked to ensure that they wer
 <a name="features"></a>
 
 ### **Main menu**
-
-
 The main menu features a brief print statement that welcomes the user and declares what this program is designed to do. It then gives the user three options;
 
 read some information on dive tables
@@ -133,25 +128,20 @@ or calculate a deco stop
 These options are presented and then an input is requested. The user is asked to type 'info' to access the information page, 'plan' to access the dive planning page and 'deco' to access the deco calculator.
 When the user types their selection and hits enter the program replies with 'You have selected to visit the x page'.
 
-
 ### **Info Option:**
 The info page provides information about the tables to the user in a clear and measured way. It then waits on the screen and propts the user to press any key to return home when they have finished reading. By asking the user to signal that they have finished reading by pressing any key, we prevent the program from moving on before they have finished reading.
 
 ### **Dive planning Option**
-
-
 The dive planning option takes the user to a section that gives them the option to select to plan their dive based on depth or time. When they user makes a selction of time, the program prints 'You have selected to work out how long you can stay at a given depth'. When the suer selects to work out how deep they can be for their dive, the program prints 'You have selected to work out how deep you can go for a given time'.
 The user is then propted to imput either their set depth or time and the program reads back to them this selection before directing them to the function that calculates depth or time respectively.
 
 ### **Deco calculator option:**
-
 On selecting this option the diver is taken to the deco calculator function. This then asks the user if they would like to start a calculation. Choosing n (no) will take the user back to the meain menu, while choosing y (yes) propts the program to ask further questions. The program will then request a depth and time input. It will then print what the inoutted depth and time was to the user.
 If the depth or time fall out of the range supported by the bulhemann tables then the program will inform the user that the tables does not support depths exceeding 51m or times exceeding 125 minutes. It will then give the user the opportunity to start again.
 If the depth and time are within the range, the program will check row 2, the row that contains the 3 minute stop time. If this is zero then all other stops are 0. However if this is not 0, then it will check row 3 for 0, if this is zero it gives the number in row 2 as a 3m deco time. If row 3 contains a number > than 0, it will then check row 4, the 9m stop time row. If this contains 0, it will give the time for 3m and 6m. If this contains a number > 0, it will give the stop time for 3m, 6m and 9m.
 This information will be printed to the terminal. The user will then be asked if they wish to make another calculation or return to the main landing menu.
 
 **Further features I would implement:**
-
 If I was to build this program with more time and scope I would implement some different features.
 
 * I would have more options for information, such as a history option that would explore the history of dive tables and decompression theory (which is quite fascinating!).
@@ -168,13 +158,11 @@ If I was to build this program with more time and scope I would implement some d
 
 
 ### **Languages** 
-
 The languages used in this project were;
 
 * Python
 
 ### **Frameworks/Libraries/programs:**
-
 * GitHub: Used to store the project and to deploy the finished project.
 * Fork: This was used as a local place to push code to and to pull from the Git repository.
 * Brackets text editor: This was used to write the code locally.
@@ -182,9 +170,7 @@ The languages used in this project were;
 * Heroku was used to deploy my project.
 
 ### **Testing software used:**
-
 * I used PEP8 to test my program (http://pep8online.com/).
-
 
 ------------------------------------------------------------------
 
@@ -195,9 +181,7 @@ The languages used in this project were;
 ### **Troubleshooting:**
 Troubleshooting in this project was predominantly focused around issues related to being new to the language. Simple synthax errors as well as function placement and errors in logic made up the bulk of issues that were encountered.
 
-
 **Testing the program:**
-    
 * All input sections worked effectively. Yes.
 * All requested inputs were assigned an output. Yes.
 * Outputs were correct for the input. Yes.
@@ -205,7 +189,6 @@ Troubleshooting in this project was predominantly focused around issues related 
 * There was smooth transition between sections. Yes.
 * The program was user friendly and intuitive. Yes.
 * The outpts given where the program needed to reference the google sheet were correct. Yes.
-
 
 **Error Handling and input control:**
 Error handling and input control were very interesting elements of this project to tackle.
@@ -230,7 +213,6 @@ This was solved by using the same logic used in dive planning, to check for the 
 
 
 **Testing using PEP8:**
-
 I used the software PEP8 to test each python file individually. The results were all errors pertaining to line length being too long and trailing white spaces. I broke the lines up by using ''' but could not remedy the whitespaces without removing spaces from between words. When i deployed with the lines broken they were displayig wrong so i decided to return them to their previous state as i did not have time to seek another way to solve the line too long error.
 No other errors were present.
 
@@ -241,8 +223,6 @@ No other errors were present.
 <a name="bugs"></a>
 
 ### **Bugs Found:**
-
-
 Some interesting bugs were;
 
  An infinite loop within a while statement that continued to print a statement eternally until i hit cntrl + c. This was fixed by calling the function again after printing the error message once and then breaking the loop.
@@ -252,8 +232,6 @@ Some interesting bugs were;
  Another bug that was occuring was particularly interesting and difficult to find. After a user had calculated a deco and returned to the main menu, the program remained in a loop and would only return 'No deco needed' to any input. This was solved by having the exit function in the main menu call the landing page function.
 
 Initially i had all of my functions in one file run.py, I eventully decided to break them out into classes in different files and this dramatically improved the ease with which i could fix errors.
-
-
 
 ------------------------------------------------------------------
 
@@ -275,7 +253,6 @@ Deployment of the program was done via github and Heroku;
 * I was then given the option to deploy.
 * I hit deploy and the program opened in a new tab.
 
-
 ------------------------------------------------------------------
 
 ## Credits and Acknowledgements
@@ -283,13 +260,11 @@ Deployment of the program was done via github and Heroku;
 <a name="credits"></a>
 
 ### **Credits:**
-
 * Code: Code advice was taken from Stack Overflow (https://stackoverflow.com/) and the Code Institutes workthrough projct and course content.
 * Information: Some information was taken from dive-tach (http://www.dive-tech.co.uk/workman%20and%20buhlmann.htm) and from Dip N Dive (https://dipndive.com/blogs/dive-gear/dive-computer-algorithms-for-dummies).
 
 
 ### **Acknowledgements:** 
-
 * My program coordinator Kasia for contiuned support and advice throughout.
 * My software developer friends (Joshua Butler-senior dev at Overstock Ireland and Glenn Gilmartin- senior dev at Overstock Ireland) for their advice and patience.
 * My mentor Seun Owonikoko for advising on the development stages of my project.

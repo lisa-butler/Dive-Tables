@@ -43,8 +43,7 @@ class CalcFunctions(object):
                     if larger_number_count == 1:
                         assumed_depth = int(row[0])
                     if assumed_depth == int(row[0]):
-                        if int(row[2]) == 0:
-                            longest_time = int(row[1])
+                        longest_time = int(row[1])
         if inputtedMins > longest_time:
             print("\n")
             time.sleep(1)
