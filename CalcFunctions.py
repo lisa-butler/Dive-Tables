@@ -34,7 +34,12 @@ class CalcFunctions(object):
         larger_number_count = 0
 
         if int(inputtedMins) > 125 or int(inputtedDepth) > 51:
-            print('Buehlmann tables do not support depths exceeding 51m and dives exceeding 125 minutes, please try again')
+            print("\n")
+            time.sleep(1.5)
+            print('\nBuehlmann tables do not support depths exceeding 51m and dives exceeding 125 minutes, please try again\n')
+            print("\n")
+            time.sleep(1.5)
+            return
         
         for row in data:
             if row[0] != "meters":
