@@ -46,7 +46,24 @@ class CalcFunctions(object):
                         if int(row[2]) == 0:
                             longest_time = int(row[1])
         if inputtedMins > longest_time:
-            print(f"Max time at this depth is {longest_time}")                       
+            print("\n")
+            time.sleep(1)
+            print("\n-------------------------------------------------------------------")
+            print(f"Time inputted exceeds max time, max time at {inputtedDepth} meters is {longest_time} minutes")
+            print("-------------------------------------------------------------------\n")
+            time.sleep(2)
+            input("\nTo return to main menu hit Enter")
+            time.sleep(2)
+            print("\nReturning to main menu\n")
+            time.sleep(2)
+            print("\n")
+            time.sleep(1)
+            print("\n")
+            time.sleep(1)
+            print("\n")
+            time.sleep(2)
+            print("\n")
+
         else:
             for row in data:
                 if row[0] != "meters":
@@ -136,5 +153,5 @@ class CalcFunctions(object):
                                 time.sleep(2)
                                 print("\n")
                                 break
-                    
-                       
+
+
