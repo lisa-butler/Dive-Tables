@@ -9,10 +9,15 @@ This command-line interface project is built around the concept of a dive comput
 This is due, predominantly, to the risk of decompression illness. When at depth and at an increased ambient pressure, the divers tissues absorb nitrogen faster. When surfacing from a dive, the diver must give adequate time for their body tissues to 'off-gas'. Not allowing enough time for this or ascending too quickly, can cause the nitrogen in the blood to form bubbles and block off essential tissues, such as the brain, spinal cord etc.
 
 All computers operate off an algorithm that woks out how long a diver can stay at the depth they are at before they will need to add additional ascent stops to ensure they have off-gassed properly.
+If a diver was using these tables, he or she would carry them with them on a dive and would plan their dive strictly within the rules drawn out by the tables.
 
 This project aims to create a simple and interactive dive computer based on the Buehlmann tables that can be used to plan and calculate depths, times and decos. This can provide an understanding of how dive computers work as well as aiding in dive planning and understanding the tables.
 
-An image of the tables that this project is based on can be viewed below.
+An image of the tables that this project is based on can be viewed below. It may be important to understand the logic behind these tables in order to test my projects logic. The depth in meters is the first column, displayed in white featuring the numbers 12, 15, 18 etc. As a diver using these tables, i would look for my depth on this coloum. If i was diving to a depth not displayed, i would select the nearest higher value, always rounding upwards. So for example, i am doing a dive to 13m, i do not calculate based on 12m, i move to the 15m category.
+The next column of numbers is the time, this depicts the longest i can stay at these depths for. The numbers are the RNT or residual nitrogen time, these were an element ii wanted to add to this project but simply didnt have the time. These show how much nitrogen is left in the divers blood after x amount of time on the surface, and hence, help them calculate their next max dive time and depth. This is where time would come in, so if i dive to 12m for 40 minutes, i would refernece the RG for 57 minutes, which would put me in category D. These tables do not cater for dives outside of 125 minutes or deeper than 51 meters. A diver at a depth of 12m should not exceed 125 minutes, a diver at 15m should not exceed 90 minutes etc. 
+
+
+
 
 ![Dive Tables](images/tables.jpg)
 
