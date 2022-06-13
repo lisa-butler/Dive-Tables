@@ -30,9 +30,23 @@ class CalcFunctions(object):
 
         helper = HelperMethods()
         data = helper.get_data()
+        longest_time = 0
+        larger_number_count = 0
 
         if int(inputtedMins) > 125 or int(inputtedDepth) > 51:
-            print('Buehlmann tables do not support depths exceeding 51m and dives exceeding 125 minutes, please try again')   
+            print('Buehlmann tables do not support depths exceeding 51m and dives exceeding 125 minutes, please try again')
+        
+        for row in data:
+            if row[0] != "meters":
+                if int(inputtedDepth) <= int(row[0]):
+                    larger_number_count = larger_number_count+1
+                    if larger_number_count == 1:
+                        assumed_depth = int(row[0])
+                    if assumed_depth == int(row[0]):
+                        if int(row[2]) == 0:
+                            longest_time = int(row[1])
+        if inputtedMins > longest_time:
+            print(f"Max time at this depth is {longest_time}")                       
         else:
             for row in data:
                 if row[0] != "meters":
@@ -122,20 +136,5 @@ class CalcFunctions(object):
                                 time.sleep(2)
                                 print("\n")
                                 break
-                        # elif int(inputtedMins) > int(row[1]):
-                        #     print("\n")
-                        #     time.sleep(2)
-                        #     print("\nMax time for this depth exceeded\n")
-                        #     input("\nTo return to main menu hit Enter")
-                        #     time.sleep(2)
-                        #     print("\nReturning to main menu\n")
-                        #     time.sleep(2)
-                        #     print("\n")
-                        #     time.sleep(1)
-                        #     print("\n")
-                        #     time.sleep(1)
-                        #     print("\n")
-                        #     time.sleep(2)
-                        #     print("\n")
-
-                            # break      
+                    
+                       

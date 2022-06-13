@@ -158,6 +158,7 @@ If I was to build this program with more time and scope I would implement some d
 * I would have a user information storage option so that the user could come back and view their previous calculations.
 * I would have a front end to improve user experience.
 * I would have an option to make your calculations using different algorithms, rather than solely bulhmann.
+* I would also want the ability to calculate the RNT and the repeat dive times.
 
 ------------------------------------------------------------------
 
@@ -223,6 +224,9 @@ In order to ensure that the input was one of these, i used a simple else stateme
 The plan options were slightly more difficult to account for. I needed to ensure that the dept did not exceed 51m and the time did not exceed 125 minutes, as these tables do no account for values outside of this range. I did this by having the program check if they were >125 or >51. I then needed to ensure that the inputs were numbers only. This was done using the except ValueError function inside a while statement. This proved to be a very efficient way of doing this and held up to testing.
 
 The same methods as above were used to ensure that the numbers inputted for the deco calculations were both >51 and >125 and also that they were numbers.
+
+Edge case management also took up a great deal of time on this project. One such edge case that was found by accidnt was if the time inputted for the deco calculation exceded the max time in that depth category, the program would not give a readout and would return immediately to main menu.
+This was solved by using the same logic used in dive planning, to check for the max time at that depth.
 
 
 **Testing using PEP8:**
