@@ -138,6 +138,4 @@ def deco_calculator():
         deco_calculator()
 
    
-
-
 landing_page()
